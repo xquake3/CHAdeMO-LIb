@@ -1,0 +1,3637 @@
+Renesas Optimizing Linker (W3.05.00 )             11-Dec-2023 17:49:17
+
+*** Options ***
+
+-MAKEUD=DefaultBuild\VCU.lk.ud
+-subcommand=DefaultBuild\VCU.clnk
+-input=DefaultBuild\cstart.obj
+-input=DefaultBuild\r_cg_main.obj
+-input=DefaultBuild\r_cg_intvector.obj
+-input=DefaultBuild\r_cg_systeminit.obj
+-input=DefaultBuild\r_cg_cgc.obj
+-input=DefaultBuild\r_cg_cgc_user.obj
+-input=DefaultBuild\r_cg_port.obj
+-input=DefaultBuild\r_cg_port_user.obj
+-input=DefaultBuild\can.obj
+-input=DefaultBuild\r_cg_ostm.obj
+-input=DefaultBuild\r_cg_ostm_user.obj
+-input=DefaultBuild\r_cg_taub.obj
+-input=DefaultBuild\r_cg_taub_user.obj
+-input=DefaultBuild\can_in.obj
+-input=DefaultBuild\can_out.obj
+-input=DefaultBuild\state.obj
+-input=DefaultBuild\r_fdl_hw_access.obj
+-input=DefaultBuild\r_fdl_user_if.obj
+-input=DefaultBuild\r_fdl_user_if_init.obj
+-input=DefaultBuild\fdl.obj
+-input=DefaultBuild\fdl_descriptor.obj
+-input=DefaultBuild\fdl_user.obj
+-input=DefaultBuild\boot.obj
+-input=DefaultBuild\r_cg_adc.obj
+-input=DefaultBuild\r_cg_adc_user.obj
+-input=DefaultBuild\deration.obj
+-input=DefaultBuild\r_cg_intc.obj
+-input=DefaultBuild\r_cg_intc_user.obj
+-input=DefaultBuild\r_cg_stbc.obj
+-input=DefaultBuild\r_cg_stbc_user.obj
+-input=DefaultBuild\vector_def.obj
+-input=DefaultBuild\debugs.obj
+-input=DefaultBuild\eeprom_tork.obj
+-input=DefaultBuild\auto_mpp.obj
+-input=DefaultBuild\r_cg_taud.obj
+-input=DefaultBuild\r_cg_taud_user.obj
+-input=DefaultBuild\CHAdeMO.obj
+-debug
+-nocompress
+-NOOPtimize
+-output=DefaultBuild\VCU.abs
+-library=v850e3v5\rhf8n.lib
+-library=v850e3v5\libmalloc.lib
+-list=DefaultBuild\VCU.map
+-show=symbol,total_size
+-start=RESET/0,EIINTTBL.const/00000200,.const,.INIT_DSEC.const,.INIT_BSEC.const,.text,.data,R_FDL_Text.text,R_FDL_Const.const/00001000,.data.R,.bss,.stack.bss,R_FDL_Data.bss,R_FDL_CodeRam.bss/FEDE8000
+-rom=.data=.data.R
+-memory=high
+-total_size
+-nologo
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+RESET
+                                  00000000  000001f7       1f8   200
+EIINTTBL.const
+                                  00000200  00000797       598   4
+.const
+                                  00001000  00003877      2878   4
+.INIT_DSEC.const
+                                  00003878  00003883         c   4
+.INIT_BSEC.const
+                                  00003884  0000388b         8   4
+.text
+                                  0000388c  00012e45      f5ba   2
+.data
+                                  00012e48  000131ba       373   4
+R_FDL_Text.text
+                                  000131bc  0001460f      1454   2
+R_FDL_Const.const
+                                  00014610  00014622        13   4
+.data.R
+                                  fede8000  fede8372       373   4
+.bss
+                                  fede8374  fede9ee7      1b74   4
+.stack.bss
+                                  fede9ee8  fedea6e7       800   4
+R_FDL_Data.bss
+                                  fedea6e8  fedea74f        68   4
+R_FDL_CodeRam.bss
+                                  fedea750  fedea84f       100   4
+
+*** Total Section Size ***
+
+RAMDATA SECTION:  0000284f Byte(s)
+ROMDATA SECTION:  000031aa Byte(s)
+PROGRAM SECTION:  00010c06 Byte(s)
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=RESET
+FILE=DefaultBuild\boot.obj
+                                  00000000  000001f7       1f8
+
+SECTION=EIINTTBL.const
+FILE=DefaultBuild\r_cg_intvector.obj
+                                  00000200  00000797       598
+  _INT_Vectors
+                                  00000200       598   data ,g         * 
+
+SECTION=.const
+FILE=DefaultBuild\r_cg_main.obj
+                                  00001000  00001004         5
+FILE=DefaultBuild\can_out.obj
+                                  00001008  00002e13      1e0c
+FILE=DefaultBuild\fdl_descriptor.obj
+                                  00002e14  00002e1b         8
+  _sampleApp_fdlConfig_enu
+                                  00002e14         8   data ,g         * 
+FILE=DefaultBuild\debugs.obj
+                                  00002e1c  00002e7c        61
+FILE=DefaultBuild\eeprom_tork.obj
+                                  00002e80  00003660       7e1
+FILE=_ctype_
+                                  00003664  00003764       101
+  __ctype_
+                                  00003664         0   none ,g         * 
+FILE=_frexp10
+                                  00003768  0000377f        18
+  _cxf
+                                  00003768         0   none ,l         * 
+FILE=_make_mp
+                                  00003780  0000378b         c
+  _cxf
+                                  00003780         0   none ,l         * 
+FILE=literal
+                                  0000378c  000037a5        1a
+  __REL_A_NAN
+                                  0000378c         0   none ,g         * 
+  __REL_A_INF
+                                  00003792         0   none ,g         * 
+  __REL_A_PINF
+                                  00003798         0   none ,g         * 
+  __REL_A_MINF
+                                  0000379f         0   none ,g         * 
+FILE=_exp10xd
+                                  000037a8  000037b3         c
+  _clog10
+                                  000037a8         0   none ,l         * 
+FILE=expxd
+                                  000037b4  00003877        c4
+  C_K
+                                  000037b4         0   none ,l         * 
+  C_T
+                                  00003838         0   none ,l         * 
+
+SECTION=.INIT_DSEC.const
+FILE=DefaultBuild\cstart.obj
+                                  00003878  00003883         c
+
+SECTION=.INIT_BSEC.const
+FILE=DefaultBuild\cstart.obj
+                                  00003884  0000388b         8
+
+SECTION=.text
+FILE=DefaultBuild\cstart.obj
+                                  0000388c  00003913        88
+  __cstart
+                                  0000388c         0   none ,g         * 
+  _RAMINIT0
+                                  000038a6         0   none ,l         * 
+  _RAMINIT1
+                                  000038b8         0   none ,l         * 
+  _exit
+                                  00003912         0   none ,l         * 
+FILE=DefaultBuild\r_cg_main.obj
+                                  00003914  00003ed1       5be
+  _jump_leapOfFaith
+                                  00003914         8   func ,g         * 
+  _main
+                                  0000391c       444   func ,g         * 
+  _R_MAIN_UserInit
+                                  00003d60        9c   func ,g         * 
+  _go_f0ta
+                                  00003dfc        d6   func ,g         * 
+FILE=DefaultBuild\r_cg_systeminit.obj
+                                  00003ed2  00003ef9        28
+  _R_Systeminit
+                                  00003ed2        28   func ,g         * 
+FILE=DefaultBuild\r_cg_cgc.obj
+                                  00003efa  0000435b       462
+  _jump_f2
+                                  00003efa         8   func ,g         * 
+  _R_CGC_Create
+                                  00003f02       45a   func ,g         * 
+FILE=DefaultBuild\r_cg_port.obj
+                                  0000435c  0000457f       224
+  _R_PORT_Create
+                                  0000435c       224   func ,g         * 
+FILE=DefaultBuild\can.obj
+                                  00004580  00004d99       81a
+  _CAN_INIT
+                                  00004580       2be   func ,g         * 
+  _MY_CAN0_Tx
+                                  0000483e        44   func ,g         * 
+  _MY_CAN1_Tx
+                                  00004882        36   func ,g         * 
+  _CAN0_RxD
+                                  000048b8        9e   func ,g         * 
+  _CAN1_RxD
+                                  00004956        9e   func ,g         * 
+  _CAN_Global_Error_ISR
+                                  000049f4        9a   func ,g         * 
+  _CAN_Rx_FIFO_ISR
+                                  00004a8e        a6   func ,g         * 
+  _CAN0_Error_ISR
+                                  00004b34        86   func ,g         * 
+  _CAN0_TxD_RxD_FIFO_Receive_ISR
+                                  00004bba        96   func ,g         * 
+  _CAN0_TxD_ISR
+                                  00004c50        6a   func ,g         * 
+  _can_parser
+                                  00004cba        e0   func ,g         * 
+FILE=DefaultBuild\r_cg_ostm.obj
+                                  00004d9a  00004e15        7c
+  _R_OSTM0_Create
+                                  00004d9a        40   func ,g         * 
+  _R_OSTM0_Start
+                                  00004dda        12   func ,g         * 
+  _R_OSTM0_Stop
+                                  00004dec        22   func ,g         * 
+  _R_OSTM0_Set_CompareValue
+                                  00004e0e         8   func ,g         * 
+FILE=DefaultBuild\r_cg_ostm_user.obj
+                                  00004e16  00004fd1       1bc
+  _r_ostm0_interrupt
+                                  00004e16       1ac   func ,g         * 
+  _delay
+                                  00004fc2        10   func ,g         * 
+FILE=DefaultBuild\r_cg_taub.obj
+                                  00004fd2  000051e9       218
+  _R_TAUB0_Create
+                                  00004fd2       184   func ,g         * 
+  _R_TAUB0_Channel0_Start
+                                  00005156        22   func ,g         * 
+  _R_TAUB0_Channel0_Stop
+                                  00005178        30   func ,g         * 
+  _R_TAUB0_Channel1_Start
+                                  000051a8        1a   func ,g         * 
+  _R_TAUB0_Channel1_Stop
+                                  000051c2        28   func ,g         * 
+FILE=DefaultBuild\r_cg_taub_user.obj
+                                  000051ea  00005a95       8ac
+  _r_taub0_channel0_interrupt
+                                  000051ea        3c   func ,g         * 
+  _r_taub0_channel1_interrupt
+                                  00005226       834   func ,g         * 
+  _r_taub0_channel13_interrupt
+                                  00005a5a        3c   func ,g         * 
+FILE=DefaultBuild\can_in.obj
+                                  00005a96  00006c11      117c
+  _can_in_parsing
+                                  00005a96      117c   func ,g         * 
+FILE=DefaultBuild\can_out.obj
+                                  00006c12  0000b005      43f4
+  _add_frame_here
+                                  00006c12      27fa   func ,g         * 
+  _out_frame_setter
+                                  0000940c       738   func ,g         * 
+  _out_frame_maker
+                                  00009b44      11de   func ,g         * 
+  _addFlagsTo102
+                                  0000ad22       2e4   func ,g         * 
+FILE=DefaultBuild\state.obj
+                                  0000b006  0000c381      137c
+  _STATE_VIA_IO
+                                  0000b006      10d8   func ,g         * 
+  _GetAtStartLocks
+                                  0000c0de        56   func ,g         * 
+  _GetRunningLocks
+                                  0000c134        a4   func ,g         * 
+  _WarnRunningLocks
+                                  0000c1d8        b0   func ,g         * 
+  _premiumCheck
+                                  0000c288        38   func ,g         * 
+  _RPMramping
+                                  0000c2c0        a2   func ,g         * 
+  _enableCANTranscivers
+                                  0000c362        20   func ,g         * 
+FILE=DefaultBuild\fdl.obj
+                                  0000c382  0000c5a1       220
+  _EraseAllEeprom
+                                  0000c382       220   func ,g         * 
+FILE=DefaultBuild\fdl_user.obj
+                                  0000c5a2  0000c5d7        36
+  _FDL_User_CriticalSetionBegin
+                                  0000c5a2        1e   func ,g         * 
+  _FDL_User_CriticalSetionEnd
+                                  0000c5c0        14   func ,g         * 
+  _FDL_Open
+                                  0000c5d4         2   func ,g         * 
+  _FDL_Close
+                                  0000c5d6         2   func ,g         * 
+FILE=DefaultBuild\boot.obj
+                                  0000c5d8  0000c671        9a
+  _Dummy
+                                  0000c5d8         0   none ,l         * 
+  _Dummy_EI
+                                  0000c5da         0   none ,l         * 
+  __start
+                                  0000c5dc         0   none ,l         * 
+  _hdwinit
+                                  0000c636         0   none ,l         * 
+  _zeroclr4
+                                  0000c64c         0   none ,l         * 
+  _set_table_reference_method
+                                  0000c65a         0   none ,l         * 
+FILE=DefaultBuild\r_cg_adc.obj
+                                  0000c672  0000c925       2b4
+  _getADC0n1_result
+                                  0000c672        1c   func ,g         * 
+  _R_ADC0_Create
+                                  0000c68e        e8   func ,g         * 
+  _R_ADC0_Halt
+                                  0000c776        1a   func ,g         * 
+  _R_ADC0_ScanGroup1_Start
+                                  0000c790         2   func ,g         * 
+  _R_ADC0_ScanGroup1_OperationOn
+                                  0000c792         a   func ,g         * 
+  _R_ADC0_ScanGroup1_GetResult
+                                  0000c79c        60   func ,g         * 
+  _R_ADC0_TH_Sampling_Start
+                                  0000c7fc         a   func ,g         * 
+  _R_ADC1_Create
+                                  0000c806        9a   func ,g         * 
+  _R_ADC1_Halt
+                                  0000c8a0        1a   func ,g         * 
+  _R_ADC1_ScanGroup1_Start
+                                  0000c8ba         2   func ,g         * 
+  _R_ADC1_ScanGroup1_OperationOn
+                                  0000c8bc         a   func ,g         * 
+  _R_ADC1_ScanGroup1_GetResult
+                                  0000c8c6        60   func ,g         * 
+FILE=DefaultBuild\deration.obj
+                                  0000c926  0000cf89       664
+  _derationDefaults
+                                  0000c926        4a   func ,g         * 
+  _realTimeDeration
+                                  0000c970       500   func ,g         * 
+  _derateAcMotTemp
+                                  0000ce70       11a   func ,g         * 
+FILE=DefaultBuild\r_cg_intc.obj
+                                  0000cf8a  0000d3df       456
+  _R_INTC_Create
+                                  0000cf8a       368   func ,g         * 
+  _R_INTP2_Start
+                                  0000d2f2         a   func ,g         * 
+  _R_INTP2_Stop
+                                  0000d2fc        18   func ,g         * 
+  _R_INTP5_Start
+                                  0000d314         a   func ,g         * 
+  _R_INTP5_Stop
+                                  0000d31e        18   func ,g         * 
+  _R_INTP6_Start
+                                  0000d336         a   func ,g         * 
+  _R_INTP6_Stop
+                                  0000d340        18   func ,g         * 
+  _R_INTP7_Start
+                                  0000d358         a   func ,g         * 
+  _R_INTP7_Stop
+                                  0000d362        18   func ,g         * 
+  _R_INTP8_Start
+                                  0000d37a         a   func ,g         * 
+  _R_INTP8_Stop
+                                  0000d384        18   func ,g         * 
+  _R_INTP9_Start
+                                  0000d39c         a   func ,g         * 
+  _R_INTP9_Stop
+                                  0000d3a6        18   func ,g         * 
+  _R_INTP13_Start
+                                  0000d3be         a   func ,g         * 
+  _R_INTP13_Stop
+                                  0000d3c8        18   func ,g         * 
+FILE=DefaultBuild\r_cg_intc_user.obj
+                                  0000d3e0  0000d59d       1be
+  _r_intp2_interrupt
+                                  0000d3e0        3c   func ,g         * 
+  _r_intp5_interrupt
+                                  0000d41c        3c   func ,g         * 
+  _r_intp6_interrupt
+                                  0000d458        56   func ,g         * 
+  _r_intp7_interrupt
+                                  0000d4ae        3c   func ,g         * 
+  _r_intp8_interrupt
+                                  0000d4ea        3c   func ,g         * 
+  _r_intp9_interrupt
+                                  0000d526        3c   func ,g         * 
+  _r_intp13_interrupt
+                                  0000d562        3c   func ,g         * 
+FILE=DefaultBuild\r_cg_stbc.obj
+                                  0000d59e  0000d617        7a
+  _R_STBC_Prepare_Stop_Mode
+                                  0000d59e        44   func ,g         * 
+  _R_STBC_Start_Stop_Mode
+                                  0000d5e2        36   func ,g         * 
+FILE=DefaultBuild\r_cg_stbc_user.obj
+                                  0000d618  0000d61f         8
+  _R_STBC_Prepare_Stop_Mode_Set_Peripheral
+                                  0000d618         2   func ,g         * 
+  _R_STBC_Prepare_Stop_Mode_Set_Interrupt
+                                  0000d61a         2   func ,g         * 
+  _R_STBC_Prepare_Stop_Mode_Set_Clock_Mask
+                                  0000d61c         2   func ,g         * 
+  _R_STBC_Prepare_Stop_Mode_Set_Clock_Source
+                                  0000d61e         2   func ,g         * 
+FILE=DefaultBuild\vector_def.obj
+                                  0000d620  0000d8e7       2c8
+  _eiint0
+                                  0000d620         2   func ,g         * 
+  _eiint1
+                                  0000d622         2   func ,g         * 
+  _eiint2
+                                  0000d624         2   func ,g         * 
+  _eiint3
+                                  0000d626         2   func ,g         * 
+  _eiint4
+                                  0000d628         2   func ,g         * 
+  _eiint5
+                                  0000d62a         2   func ,g         * 
+  _eiint6
+                                  0000d62c         2   func ,g         * 
+  _eiint7
+                                  0000d62e         2   func ,g         * 
+  _eiint8
+                                  0000d630         2   func ,g         * 
+  _eiint9
+                                  0000d632         2   func ,g         * 
+  _eiint10
+                                  0000d634         2   func ,g         * 
+  _eiint11
+                                  0000d636         2   func ,g         * 
+  _eiint12
+                                  0000d638         2   func ,g         * 
+  _eiint13
+                                  0000d63a         2   func ,g         * 
+  _eiint14
+                                  0000d63c         2   func ,g         * 
+  _eiint15
+                                  0000d63e         2   func ,g         * 
+  _eiint16
+                                  0000d640         2   func ,g         * 
+  _eiint17
+                                  0000d642         2   func ,g         * 
+  _eiint18
+                                  0000d644         2   func ,g         * 
+  _eiint19
+                                  0000d646         2   func ,g         * 
+  _eiint20
+                                  0000d648         2   func ,g         * 
+  _eiint21
+                                  0000d64a         2   func ,g         * 
+  _eiint22
+                                  0000d64c         2   func ,g         * 
+  _eiint23
+                                  0000d64e         2   func ,g         * 
+  _eiint24
+                                  0000d650         2   func ,g         * 
+  _eiint25
+                                  0000d652         2   func ,g         * 
+  _eiint26
+                                  0000d654         2   func ,g         * 
+  _eiint27
+                                  0000d656         2   func ,g         * 
+  _eiint28
+                                  0000d658         2   func ,g         * 
+  _eiint29
+                                  0000d65a         2   func ,g         * 
+  _eiint30
+                                  0000d65c         2   func ,g         * 
+  _eiint31
+                                  0000d65e         2   func ,g         * 
+  _eiint32
+                                  0000d660         2   func ,g         * 
+  _eiint33
+                                  0000d662         2   func ,g         * 
+  _eiint34
+                                  0000d664         2   func ,g         * 
+  _eiint35
+                                  0000d666         2   func ,g         * 
+  _eiint36
+                                  0000d668         2   func ,g         * 
+  _eiint37
+                                  0000d66a         2   func ,g         * 
+  _eiint38
+                                  0000d66c         2   func ,g         * 
+  _eiint39
+                                  0000d66e         2   func ,g         * 
+  _eiint40
+                                  0000d670         2   func ,g         * 
+  _eiint41
+                                  0000d672         2   func ,g         * 
+  _eiint42
+                                  0000d674         2   func ,g         * 
+  _eiint43
+                                  0000d676         2   func ,g         * 
+  _eiint44
+                                  0000d678         2   func ,g         * 
+  _eiint45
+                                  0000d67a         2   func ,g         * 
+  _eiint46
+                                  0000d67c         2   func ,g         * 
+  _eiint47
+                                  0000d67e         2   func ,g         * 
+  _eiint48
+                                  0000d680         2   func ,g         * 
+  _eiint49
+                                  0000d682         2   func ,g         * 
+  _eiint50
+                                  0000d684         2   func ,g         * 
+  _eiint51
+                                  0000d686         2   func ,g         * 
+  _eiint52
+                                  0000d688         2   func ,g         * 
+  _eiint53
+                                  0000d68a         2   func ,g         * 
+  _eiint54
+                                  0000d68c         2   func ,g         * 
+  _eiint55
+                                  0000d68e         2   func ,g         * 
+  _eiint56
+                                  0000d690         2   func ,g         * 
+  _eiint57
+                                  0000d692         2   func ,g         * 
+  _eiint58
+                                  0000d694         2   func ,g         * 
+  _eiint59
+                                  0000d696         2   func ,g         * 
+  _eiint60
+                                  0000d698         2   func ,g         * 
+  _eiint61
+                                  0000d69a         2   func ,g         * 
+  _eiint62
+                                  0000d69c         2   func ,g         * 
+  _eiint63
+                                  0000d69e         2   func ,g         * 
+  _eiint64
+                                  0000d6a0         2   func ,g         * 
+  _eiint65
+                                  0000d6a2         2   func ,g         * 
+  _eiint66
+                                  0000d6a4         2   func ,g         * 
+  _eiint67
+                                  0000d6a6         2   func ,g         * 
+  _eiint68
+                                  0000d6a8         2   func ,g         * 
+  _eiint69
+                                  0000d6aa         2   func ,g         * 
+  _eiint70
+                                  0000d6ac         2   func ,g         * 
+  _eiint71
+                                  0000d6ae         2   func ,g         * 
+  _eiint72
+                                  0000d6b0         2   func ,g         * 
+  _eiint73
+                                  0000d6b2         2   func ,g         * 
+  _eiint74
+                                  0000d6b4         2   func ,g         * 
+  _eiint75
+                                  0000d6b6         2   func ,g         * 
+  _eiint76
+                                  0000d6b8         2   func ,g         * 
+  _eiint77
+                                  0000d6ba         2   func ,g         * 
+  _eiint78
+                                  0000d6bc         2   func ,g         * 
+  _eiint79
+                                  0000d6be         2   func ,g         * 
+  _eiint80
+                                  0000d6c0         2   func ,g         * 
+  _eiint81
+                                  0000d6c2         2   func ,g         * 
+  _eiint82
+                                  0000d6c4         2   func ,g         * 
+  _eiint83
+                                  0000d6c6         2   func ,g         * 
+  _eiint85
+                                  0000d6c8         2   func ,g         * 
+  _eiint86
+                                  0000d6ca         2   func ,g         * 
+  _eiint87
+                                  0000d6cc         2   func ,g         * 
+  _eiint88
+                                  0000d6ce         2   func ,g         * 
+  _eiint89
+                                  0000d6d0         2   func ,g         * 
+  _eiint90
+                                  0000d6d2         2   func ,g         * 
+  _eiint91
+                                  0000d6d4         2   func ,g         * 
+  _eiint92
+                                  0000d6d6         2   func ,g         * 
+  _eiint93
+                                  0000d6d8         2   func ,g         * 
+  _eiint94
+                                  0000d6da         2   func ,g         * 
+  _eiint95
+                                  0000d6dc         2   func ,g         * 
+  _eiint96
+                                  0000d6de         2   func ,g         * 
+  _eiint97
+                                  0000d6e0         2   func ,g         * 
+  _eiint98
+                                  0000d6e2         2   func ,g         * 
+  _eiint99
+                                  0000d6e4         2   func ,g         * 
+  _eiint100
+                                  0000d6e6         2   func ,g         * 
+  _eiint101
+                                  0000d6e8         2   func ,g         * 
+  _eiint102
+                                  0000d6ea         2   func ,g         * 
+  _eiint103
+                                  0000d6ec         2   func ,g         * 
+  _eiint104
+                                  0000d6ee         2   func ,g         * 
+  _eiint105
+                                  0000d6f0         2   func ,g         * 
+  _eiint106
+                                  0000d6f2         2   func ,g         * 
+  _eiint107
+                                  0000d6f4         2   func ,g         * 
+  _eiint108
+                                  0000d6f6         2   func ,g         * 
+  _eiint109
+                                  0000d6f8         2   func ,g         * 
+  _eiint110
+                                  0000d6fa         2   func ,g         * 
+  _eiint111
+                                  0000d6fc         2   func ,g         * 
+  _eiint112
+                                  0000d6fe         2   func ,g         * 
+  _eiint113
+                                  0000d700         2   func ,g         * 
+  _eiint114
+                                  0000d702         2   func ,g         * 
+  _eiint115
+                                  0000d704         2   func ,g         * 
+  _eiint116
+                                  0000d706         2   func ,g         * 
+  _eiint117
+                                  0000d708         2   func ,g         * 
+  _eiint118
+                                  0000d70a         2   func ,g         * 
+  _eiint119
+                                  0000d70c         2   func ,g         * 
+  _eiint120
+                                  0000d70e         2   func ,g         * 
+  _eiint121
+                                  0000d710         2   func ,g         * 
+  _eiint122
+                                  0000d712         2   func ,g         * 
+  _eiint123
+                                  0000d714         2   func ,g         * 
+  _eiint124
+                                  0000d716         2   func ,g         * 
+  _eiint125
+                                  0000d718         2   func ,g         * 
+  _eiint126
+                                  0000d71a         2   func ,g         * 
+  _eiint127
+                                  0000d71c         2   func ,g         * 
+  _eiint128
+                                  0000d71e         2   func ,g         * 
+  _eiint129
+                                  0000d720         2   func ,g         * 
+  _eiint130
+                                  0000d722         2   func ,g         * 
+  _eiint131
+                                  0000d724         2   func ,g         * 
+  _eiint132
+                                  0000d726         2   func ,g         * 
+  _eiint133
+                                  0000d728         2   func ,g         * 
+  _eiint134
+                                  0000d72a         2   func ,g         * 
+  _eiint135
+                                  0000d72c         2   func ,g         * 
+  _eiint136
+                                  0000d72e         2   func ,g         * 
+  _eiint137
+                                  0000d730         2   func ,g         * 
+  _eiint138
+                                  0000d732         2   func ,g         * 
+  _eiint139
+                                  0000d734         2   func ,g         * 
+  _eiint140
+                                  0000d736         2   func ,g         * 
+  _eiint141
+                                  0000d738         2   func ,g         * 
+  _eiint143
+                                  0000d73a         2   func ,g         * 
+  _eiint144
+                                  0000d73c         2   func ,g         * 
+  _eiint145
+                                  0000d73e         2   func ,g         * 
+  _eiint146
+                                  0000d740         2   func ,g         * 
+  _eiint147
+                                  0000d742         2   func ,g         * 
+  _eiint148
+                                  0000d744         2   func ,g         * 
+  _eiint149
+                                  0000d746         2   func ,g         * 
+  _eiint150
+                                  0000d748         2   func ,g         * 
+  _eiint151
+                                  0000d74a         2   func ,g         * 
+  _eiint152
+                                  0000d74c         2   func ,g         * 
+  _eiint153
+                                  0000d74e         2   func ,g         * 
+  _eiint154
+                                  0000d750         2   func ,g         * 
+  _eiint155
+                                  0000d752         2   func ,g         * 
+  _eiint156
+                                  0000d754         2   func ,g         * 
+  _eiint157
+                                  0000d756         2   func ,g         * 
+  _eiint158
+                                  0000d758         2   func ,g         * 
+  _eiint159
+                                  0000d75a         2   func ,g         * 
+  _eiint160
+                                  0000d75c         2   func ,g         * 
+  _eiint161
+                                  0000d75e         2   func ,g         * 
+  _eiint162
+                                  0000d760         2   func ,g         * 
+  _eiint163
+                                  0000d762         2   func ,g         * 
+  _eiint164
+                                  0000d764         2   func ,g         * 
+  _eiint165
+                                  0000d766         2   func ,g         * 
+  _eiint166
+                                  0000d768         2   func ,g         * 
+  _eiint167
+                                  0000d76a         2   func ,g         * 
+  _eiint168
+                                  0000d76c         2   func ,g         * 
+  _eiint169
+                                  0000d76e         2   func ,g         * 
+  _eiint170
+                                  0000d770         2   func ,g         * 
+  _eiint171
+                                  0000d772         2   func ,g         * 
+  _eiint172
+                                  0000d774         2   func ,g         * 
+  _eiint173
+                                  0000d776         2   func ,g         * 
+  _eiint174
+                                  0000d778         2   func ,g         * 
+  _eiint175
+                                  0000d77a         2   func ,g         * 
+  _eiint176
+                                  0000d77c         2   func ,g         * 
+  _eiint177
+                                  0000d77e         2   func ,g         * 
+  _eiint178
+                                  0000d780         2   func ,g         * 
+  _eiint179
+                                  0000d782         2   func ,g         * 
+  _eiint180
+                                  0000d784         2   func ,g         * 
+  _eiint181
+                                  0000d786         2   func ,g         * 
+  _eiint182
+                                  0000d788         2   func ,g         * 
+  _eiint183
+                                  0000d78a         2   func ,g         * 
+  _eiint184
+                                  0000d78c         2   func ,g         * 
+  _eiint185
+                                  0000d78e         2   func ,g         * 
+  _eiint186
+                                  0000d790         2   func ,g         * 
+  _eiint187
+                                  0000d792         2   func ,g         * 
+  _eiint188
+                                  0000d794         2   func ,g         * 
+  _eiint189
+                                  0000d796         2   func ,g         * 
+  _eiint190
+                                  0000d798         2   func ,g         * 
+  _eiint191
+                                  0000d79a         2   func ,g         * 
+  _eiint192
+                                  0000d79c         2   func ,g         * 
+  _eiint193
+                                  0000d79e         2   func ,g         * 
+  _eiint194
+                                  0000d7a0         2   func ,g         * 
+  _eiint195
+                                  0000d7a2         2   func ,g         * 
+  _eiint196
+                                  0000d7a4         2   func ,g         * 
+  _eiint197
+                                  0000d7a6         2   func ,g         * 
+  _eiint198
+                                  0000d7a8         2   func ,g         * 
+  _eiint199
+                                  0000d7aa         2   func ,g         * 
+  _eiint200
+                                  0000d7ac         2   func ,g         * 
+  _eiint201
+                                  0000d7ae         2   func ,g         * 
+  _eiint202
+                                  0000d7b0         2   func ,g         * 
+  _eiint203
+                                  0000d7b2         2   func ,g         * 
+  _eiint204
+                                  0000d7b4         2   func ,g         * 
+  _eiint205
+                                  0000d7b6         2   func ,g         * 
+  _eiint206
+                                  0000d7b8         2   func ,g         * 
+  _eiint207
+                                  0000d7ba         2   func ,g         * 
+  _eiint208
+                                  0000d7bc         2   func ,g         * 
+  _eiint209
+                                  0000d7be         2   func ,g         * 
+  _eiint210
+                                  0000d7c0         2   func ,g         * 
+  _eiint211
+                                  0000d7c2         2   func ,g         * 
+  _eiint212
+                                  0000d7c4         2   func ,g         * 
+  _eiint213
+                                  0000d7c6         2   func ,g         * 
+  _eiint214
+                                  0000d7c8         2   func ,g         * 
+  _eiint215
+                                  0000d7ca         2   func ,g         * 
+  _eiint216
+                                  0000d7cc         2   func ,g         * 
+  _eiint217
+                                  0000d7ce         2   func ,g         * 
+  _eiint218
+                                  0000d7d0         2   func ,g         * 
+  _eiint219
+                                  0000d7d2         2   func ,g         * 
+  _eiint220
+                                  0000d7d4         2   func ,g         * 
+  _eiint221
+                                  0000d7d6         2   func ,g         * 
+  _eiint222
+                                  0000d7d8         2   func ,g         * 
+  _eiint223
+                                  0000d7da         2   func ,g         * 
+  _eiint224
+                                  0000d7dc         2   func ,g         * 
+  _eiint225
+                                  0000d7de         2   func ,g         * 
+  _eiint226
+                                  0000d7e0         2   func ,g         * 
+  _eiint227
+                                  0000d7e2         2   func ,g         * 
+  _eiint228
+                                  0000d7e4         2   func ,g         * 
+  _eiint229
+                                  0000d7e6         2   func ,g         * 
+  _eiint230
+                                  0000d7e8         2   func ,g         * 
+  _eiint231
+                                  0000d7ea         2   func ,g         * 
+  _eiint232
+                                  0000d7ec         2   func ,g         * 
+  _eiint233
+                                  0000d7ee         2   func ,g         * 
+  _eiint234
+                                  0000d7f0         2   func ,g         * 
+  _eiint235
+                                  0000d7f2         2   func ,g         * 
+  _eiint236
+                                  0000d7f4         2   func ,g         * 
+  _eiint237
+                                  0000d7f6         2   func ,g         * 
+  _eiint238
+                                  0000d7f8         2   func ,g         * 
+  _eiint239
+                                  0000d7fa         2   func ,g         * 
+  _eiint240
+                                  0000d7fc         2   func ,g         * 
+  _eiint241
+                                  0000d7fe         2   func ,g         * 
+  _eiint242
+                                  0000d800         2   func ,g         * 
+  _eiint243
+                                  0000d802         2   func ,g         * 
+  _eiint244
+                                  0000d804         2   func ,g         * 
+  _eiint245
+                                  0000d806         2   func ,g         * 
+  _eiint246
+                                  0000d808         2   func ,g         * 
+  _eiint247
+                                  0000d80a         2   func ,g         * 
+  _eiint248
+                                  0000d80c         2   func ,g         * 
+  _eiint249
+                                  0000d80e         2   func ,g         * 
+  _eiint250
+                                  0000d810         2   func ,g         * 
+  _eiint251
+                                  0000d812         2   func ,g         * 
+  _eiint252
+                                  0000d814         2   func ,g         * 
+  _eiint253
+                                  0000d816         2   func ,g         * 
+  _eiint254
+                                  0000d818         2   func ,g         * 
+  _eiint255
+                                  0000d81a         2   func ,g         * 
+  _eiint256
+                                  0000d81c         2   func ,g         * 
+  _eiint257
+                                  0000d81e         2   func ,g         * 
+  _eiint258
+                                  0000d820         2   func ,g         * 
+  _eiint259
+                                  0000d822         2   func ,g         * 
+  _eiint260
+                                  0000d824         2   func ,g         * 
+  _eiint261
+                                  0000d826         2   func ,g         * 
+  _eiint262
+                                  0000d828         2   func ,g         * 
+  _eiint263
+                                  0000d82a         2   func ,g         * 
+  _eiint264
+                                  0000d82c         2   func ,g         * 
+  _eiint265
+                                  0000d82e         2   func ,g         * 
+  _eiint266
+                                  0000d830         2   func ,g         * 
+  _eiint267
+                                  0000d832         2   func ,g         * 
+  _eiint268
+                                  0000d834         2   func ,g         * 
+  _eiint269
+                                  0000d836         2   func ,g         * 
+  _eiint270
+                                  0000d838         2   func ,g         * 
+  _eiint271
+                                  0000d83a         2   func ,g         * 
+  _eiint272
+                                  0000d83c         2   func ,g         * 
+  _eiint273
+                                  0000d83e         2   func ,g         * 
+  _eiint274
+                                  0000d840         2   func ,g         * 
+  _eiint275
+                                  0000d842         2   func ,g         * 
+  _eiint276
+                                  0000d844         2   func ,g         * 
+  _eiint277
+                                  0000d846         2   func ,g         * 
+  _eiint278
+                                  0000d848         2   func ,g         * 
+  _eiint279
+                                  0000d84a         2   func ,g         * 
+  _eiint280
+                                  0000d84c         2   func ,g         * 
+  _eiint281
+                                  0000d84e         2   func ,g         * 
+  _eiint282
+                                  0000d850         2   func ,g         * 
+  _eiint283
+                                  0000d852         2   func ,g         * 
+  _eiint284
+                                  0000d854         2   func ,g         * 
+  _eiint285
+                                  0000d856         2   func ,g         * 
+  _eiint286
+                                  0000d858         2   func ,g         * 
+  _eiint287
+                                  0000d85a         2   func ,g         * 
+  _eiint288
+                                  0000d85c         2   func ,g         * 
+  _eiint289
+                                  0000d85e         2   func ,g         * 
+  _eiint290
+                                  0000d860         2   func ,g         * 
+  _eiint291
+                                  0000d862         2   func ,g         * 
+  _eiint292
+                                  0000d864         2   func ,g         * 
+  _eiint293
+                                  0000d866         2   func ,g         * 
+  _eiint294
+                                  0000d868         2   func ,g         * 
+  _eiint295
+                                  0000d86a         2   func ,g         * 
+  _eiint296
+                                  0000d86c         2   func ,g         * 
+  _eiint297
+                                  0000d86e         2   func ,g         * 
+  _eiint298
+                                  0000d870         2   func ,g         * 
+  _eiint299
+                                  0000d872         2   func ,g         * 
+  _eiint300
+                                  0000d874         2   func ,g         * 
+  _eiint301
+                                  0000d876         2   func ,g         * 
+  _eiint302
+                                  0000d878         2   func ,g         * 
+  _eiint303
+                                  0000d87a         2   func ,g         * 
+  _eiint304
+                                  0000d87c         2   func ,g         * 
+  _eiint305
+                                  0000d87e         2   func ,g         * 
+  _eiint306
+                                  0000d880         2   func ,g         * 
+  _eiint307
+                                  0000d882         2   func ,g         * 
+  _eiint308
+                                  0000d884         2   func ,g         * 
+  _eiint309
+                                  0000d886         2   func ,g         * 
+  _eiint310
+                                  0000d888         2   func ,g         * 
+  _eiint311
+                                  0000d88a         2   func ,g         * 
+  _eiint312
+                                  0000d88c         2   func ,g         * 
+  _eiint313
+                                  0000d88e         2   func ,g         * 
+  _eiint314
+                                  0000d890         2   func ,g         * 
+  _eiint315
+                                  0000d892         2   func ,g         * 
+  _eiint316
+                                  0000d894         2   func ,g         * 
+  _eiint317
+                                  0000d896         2   func ,g         * 
+  _eiint318
+                                  0000d898         2   func ,g         * 
+  _eiint319
+                                  0000d89a         2   func ,g         * 
+  _eiint320
+                                  0000d89c         2   func ,g         * 
+  _eiint321
+                                  0000d89e         2   func ,g         * 
+  _eiint322
+                                  0000d8a0         2   func ,g         * 
+  _eiint323
+                                  0000d8a2         2   func ,g         * 
+  _eiint324
+                                  0000d8a4         2   func ,g         * 
+  _eiint325
+                                  0000d8a6         2   func ,g         * 
+  _eiint326
+                                  0000d8a8         2   func ,g         * 
+  _eiint327
+                                  0000d8aa         2   func ,g         * 
+  _eiint328
+                                  0000d8ac         2   func ,g         * 
+  _eiint329
+                                  0000d8ae         2   func ,g         * 
+  _eiint330
+                                  0000d8b0         2   func ,g         * 
+  _eiint331
+                                  0000d8b2         2   func ,g         * 
+  _eiint332
+                                  0000d8b4         2   func ,g         * 
+  _eiint333
+                                  0000d8b6         2   func ,g         * 
+  _eiint334
+                                  0000d8b8         2   func ,g         * 
+  _eiint335
+                                  0000d8ba         2   func ,g         * 
+  _eiint336
+                                  0000d8bc         2   func ,g         * 
+  _eiint337
+                                  0000d8be         2   func ,g         * 
+  _eiint338
+                                  0000d8c0         2   func ,g         * 
+  _eiint339
+                                  0000d8c2         2   func ,g         * 
+  _eiint340
+                                  0000d8c4         2   func ,g         * 
+  _eiint341
+                                  0000d8c6         2   func ,g         * 
+  _eiint342
+                                  0000d8c8         2   func ,g         * 
+  _eiint343
+                                  0000d8ca         2   func ,g         * 
+  _eiint344
+                                  0000d8cc         2   func ,g         * 
+  _eiint345
+                                  0000d8ce         2   func ,g         * 
+  _eiint346
+                                  0000d8d0         2   func ,g         * 
+  _eiint347
+                                  0000d8d2         2   func ,g         * 
+  _eiint348
+                                  0000d8d4         2   func ,g         * 
+  _eiint349
+                                  0000d8d6         2   func ,g         * 
+  _eiint350
+                                  0000d8d8         2   func ,g         * 
+  _eiint351
+                                  0000d8da         2   func ,g         * 
+  _eiint352
+                                  0000d8dc         2   func ,g         * 
+  _eiint353
+                                  0000d8de         2   func ,g         * 
+  _eiint354
+                                  0000d8e0         2   func ,g         * 
+  _eiint355
+                                  0000d8e2         2   func ,g         * 
+  _eiint356
+                                  0000d8e4         2   func ,g         * 
+  _eiint357
+                                  0000d8e6         2   func ,g         * 
+FILE=DefaultBuild\debugs.obj
+                                  0000d8e8  0000de4b       564
+  _soft_reset
+                                  0000d8e8        36   func ,g         * 
+  _getdate
+                                  0000d91e       15c   func ,g         * 
+  _GotDebug
+                                  0000da7a       3d2   func ,g         * 
+FILE=DefaultBuild\eeprom_tork.obj
+                                  0000de4c  0000f185      133a
+  _EEPROM_INIT
+                                  0000de4c       a06   func ,g         * 
+  _eep_frame_setter
+                                  0000e852       130   func ,g         * 
+  _Eeprom_read_all
+                                  0000e982       184   func ,g         * 
+  _ODO_write
+                                  0000eb06        84   func ,g         * 
+  _WattHrKm_write
+                                  0000eb8a        84   func ,g         * 
+  _BMSErrorWrite
+                                  0000ec0e        9a   func ,g         * 
+  _PemiumStatusWrite
+                                  0000eca8        9a   func ,g         * 
+  _feed_eeprom
+                                  0000ed42       2a6   func ,g         * 
+  _feedDebugs
+                                  0000efe8       104   func ,g         * 
+  _eepromReadByAddress
+                                  0000f0ec        9a   func ,g         * 
+FILE=DefaultBuild\auto_mpp.obj
+                                  0000f186  0000f187         2
+  _one_step
+                                  0000f186         2   func ,g         * 
+FILE=DefaultBuild\r_cg_taud.obj
+                                  0000f188  0000f2bb       134
+  _R_TAUD0_Create
+                                  0000f188        f2   func ,g         * 
+  _R_TAUD0_Channel7_Start
+                                  0000f27a        1a   func ,g         * 
+  _R_TAUD0_Channel7_Stop
+                                  0000f294        28   func ,g         * 
+FILE=DefaultBuild\r_cg_taud_user.obj
+                                  0000f2bc  0000f965       6aa
+  _r_taud0_channel7_interrupt
+                                  0000f2bc       6aa   func ,g         * 
+FILE=DefaultBuild\CHAdeMO.obj
+                                  0000f966  000105a3       c3e
+  _ChargerRunning
+                                  0000f966       4ca   func ,g         * 
+  _BeginCHAdemo
+                                  0000fe30         c   func ,g         * 
+  _vh_sub_08
+                                  0000fe3c        5c   func ,g         * 
+  _vh_sub_09
+                                  0000fe98        e8   func ,g         * 
+  _vh_sub_04
+                                  0000ff80       30a   func ,g         * 
+  _vh_sub_02
+                                  0001028a       262   func ,g         * 
+  _vh_sub_03
+                                  000104ec        36   func ,g         * 
+  _raiseChademoError
+                                  00010522        48   func ,g         * 
+  _CHAdeMO_hardStop
+                                  0001056a        3a   func ,g         * 
+FILE=atoi
+                                  000105a4  000105ab         8
+  _atol
+                                  000105a4         0   none ,g         * 
+  _atoi
+                                  000105a4         0   none ,g         * 
+FILE=cvtsd
+                                  000105ac  000105f3        48
+  __COM_ftod
+                                  000105ac         0   none ,g         * 
+  T0100
+                                  000105c0         0   none ,l         * 
+  T0101
+                                  000105c4         0   none ,l         * 
+  T_ZERO
+                                  000105d8         0   none ,l         * 
+  T_NOR
+                                  000105e0         0   none ,l         * 
+  T_INF
+                                  000105ee         0   none ,l         * 
+FILE=initsct_rh
+                                  000105f4  000106a3        b0
+  __INITSCT_RH
+                                  000105f4         0   none ,g         * 
+FILE=memset
+                                  000106a4  000106b5        12
+  _memset
+                                  000106a4         0   none ,g         * 
+  TRET
+                                  000106b4         0   none ,l         * 
+FILE=mulfd
+                                  000106b6  0001079b        e6
+  __COM_dmul
+                                  000106b6         0   none ,g         * 
+  LOOP1
+                                  000106dc         0   none ,l         * 
+  T0201
+                                  000106ea         0   none ,l         * 
+  LOOP2
+                                  000106f6         0   none ,l         * 
+  T0202
+                                  00010704         0   none ,l         * 
+  T0501
+                                  0001076c         0   none ,l         * 
+  T_EXCP0
+                                  00010770         0   none ,l         * 
+  NAN1
+                                  0001077c         0   none ,l         * 
+  ZEROWS
+                                  00010780         0   none ,l         * 
+  T_EXCP1
+                                  00010784         0   none ,l         * 
+  NAN2
+                                  0001078e         0   none ,l         * 
+  T_X001
+                                  00010792         0   none ,l         * 
+  INFWS
+                                  00010798         0   none ,l         * 
+FILE=shll
+                                  0001079c  000107c7        2c
+  __COM_shll_64_32
+                                  0001079c         0   none ,g         * 
+FILE=shrl
+                                  000107c8  000107f3        2c
+  __COM_shrl_64_32
+                                  000107c8         0   none ,g         * 
+FILE=sprintf
+                                  000107f4  0001081f        2c
+  _sprintf
+                                  000107f4         0   none ,g         * 
+FILE=strcmp
+                                  00010820  0001083d        1e
+  _strcmp
+                                  00010820         0   none ,g         * 
+  TEXIT
+                                  0001083c         0   none ,l         * 
+FILE=trncdw
+                                  0001083e  000108b3        76
+  __COM_dtou
+                                  0001083e         0   none ,g         * 
+  __COM_dtoi
+                                  00010850         0   none ,g         * 
+FILE=com1d
+                                  000108b4  00010a03       150
+  __REL_analyzed.l
+                                  000108b4         0   none ,g         * 
+  __REL_x0divd.l
+                                  00010912         0   none ,g         * 
+  __REL_xoverd.l
+                                  00010916         0   none ,g         * 
+  __REL_infwsd.l
+                                  0001091a         0   none ,g         * 
+  FINFWS
+                                  0001091c         0   none ,l         * 
+  __REL_denord.l
+                                  00010928         0   none ,g         * 
+  TDEN01
+                                  0001094c         0   none ,l         * 
+  __REL_ret0d.l
+                                  0001096e         0   none ,g         * 
+  __REL_nord.l
+                                  00010976         0   none ,g         * 
+  TNOR00
+                                  0001097e         0   none ,l         * 
+  TNOR01
+                                  00010994         0   none ,l         * 
+  FSTOR
+                                  000109a2         0   none ,l         * 
+  FSTOR1
+                                  000109b8         0   none ,l         * 
+  FSTOR2
+                                  000109cc         0   none ,l         * 
+  TRET
+                                  000109e6         0   none ,l         * 
+  __REL_xinexd.l
+                                  000109ea         0   none ,g         * 
+  __REL_ret0sd.l
+                                  000109ee         0   none ,g         * 
+  RET0S
+                                  000109f0         0   none ,l         * 
+  __REL_xnan2d.l
+                                  000109f8         0   none ,g         * 
+  __REL_xnan1d.l
+                                  000109fe         0   none ,g         * 
+FILE=strtol
+                                  00010a04  00010a6b        68
+  _strtol
+                                  00010a04         0   none ,g         * 
+FILE=vfprintf
+                                  00010a6c  00010de7       37c
+  _cast_uns.1
+                                  00010a6c         0   none ,l         * 
+  _vfprintf
+                                  00010a7a         0   none ,g         * 
+FILE=_ctoa
+                                  00010de8  00010e35        4e
+  __REL_ctoa_r
+                                  00010de8         0   none ,g         * 
+FILE=_ftoa
+                                  00010e36  00011603       7ce
+  _put_tgf_r
+                                  00010e36         0   none ,l         * 
+  _put_tf_r
+                                  00010fd4         0   none ,l         * 
+  _put_exp_r
+                                  00011168         0   none ,l         * 
+  _put_tge_r
+                                  000111dc         0   none ,l         * 
+  _put_te_r
+                                  00011304         0   none ,l         * 
+  _put_excp_r
+                                  0001142e         0   none ,l         * 
+  __REL_ftoa_r
+                                  000114d8         0   none ,g         * 
+FILE=_itoa
+                                  00011604  000116f9        f6
+  __REL_itoa_r
+                                  00011604         0   none ,g         * 
+FILE=_llitoar
+                                  000116fa  00011817       11e
+  __REL_llitoa_r
+                                  000116fa         0   none ,g         * 
+FILE=_otoa
+                                  00011818  000118db        c4
+  __REL_otoa_r
+                                  00011818         0   none ,g         * 
+FILE=_putc
+                                  000118dc  000118f9        1e
+  __REL_putc_r
+                                  000118dc         0   none ,g         * 
+  TRET
+                                  000118f8         0   none ,l         * 
+FILE=_stoa
+                                  000118fa  0001199d        a4
+  __REL_stoa_r
+                                  000118fa         0   none ,g         * 
+FILE=_strtoi
+                                  0001199e  000119f7        5a
+  __REL_strtoi
+                                  0001199e         0   none ,g         * 
+FILE=_strtoul
+                                  000119f8  00011bb3       1bc
+  _mac
+                                  000119f8         0   none ,l         * 
+  __REL_strtoul
+                                  00011a0a         0   none ,g         * 
+FILE=_ullitoar
+                                  00011bb4  00011c8f        dc
+  __REL_ullitoa_r
+                                  00011bb4         0   none ,g         * 
+FILE=_ullotoar
+                                  00011c90  00011db1       122
+  __REL_ullotoa_r
+                                  00011c90         0   none ,g         * 
+FILE=_ullxtoar
+                                  00011db2  00011f55       1a4
+  __REL_ullxtoa_r
+                                  00011db2         0   none ,g         * 
+FILE=_utoa
+                                  00011f56  0001201f        ca
+  __REL_utoa_r
+                                  00011f56         0   none ,g         * 
+FILE=_xtoa
+                                  00012020  00012173       154
+  __REL_xtoa_r
+                                  00012020         0   none ,g         * 
+FILE=com7d
+                                  00012174  0001217b         8
+  __REL_errno
+                                  00012174         0   none ,g         * 
+FILE=retd
+                                  0001217c  00012199        1e
+  __REL_retd.l
+                                  0001217c         0   none ,g         * 
+  __REL_err2d.l
+                                  00012198         0   none ,g         * 
+FILE=_divuh
+                                  0001219a  000121b7        1e
+  __REL_divuh
+                                  0001219a         0   none ,g         * 
+  T_RET
+                                  000121a8         0   none ,l         * 
+  T_RET0
+                                  000121b0         0   none ,l         * 
+  T_EXCP
+                                  000121b2         0   none ,l         * 
+FILE=_divulw
+                                  000121b8  0001222d        76
+  __REL_divulw
+                                  000121b8         0   none ,g         * 
+FILE=_frexp10
+                                  0001222e  000122f5        c8
+  __REL_frexp10d
+                                  0001222e         0   none ,g         * 
+FILE=_make_mp
+                                  000122f6  000123b1        bc
+  __REL_make_mp
+                                  000122f6         0   none ,g         * 
+FILE=_put_p
+                                  000123b2  000123d1        20
+  __REL_put_p_r
+                                  000123b2         0   none ,g         * 
+FILE=_put_pp
+                                  000123d2  000123fb        2a
+  __REL_put_pp_r
+                                  000123d2         0   none ,g         * 
+FILE=_put_ps
+                                  000123fc  0001245f        64
+  __REL_put_pps_r
+                                  000123fc         0   none ,g         * 
+FILE=abs
+                                  00012460  00012469         a
+  _labs
+                                  00012460         0   none ,g         * 
+  _abs
+                                  00012460         0   none ,g         * 
+  T_RET
+                                  00012466         0   none ,l         * 
+FILE=strlen
+                                  0001246a  00012479        10
+  _strlen
+                                  0001246a         0   none ,g         * 
+FILE=_addxd
+                                  0001247a  000124c7        4e
+  __REL_addxd_i
+                                  0001247a         0   none ,g         * 
+FILE=_dtoxd
+                                  000124c8  000124dd        16
+  __REL_dtoxd
+                                  000124c8         0   none ,g         * 
+FILE=_exp10xd
+                                  000124de  000124ff        22
+  __REL_exp10xd
+                                  000124de         0   none ,g         * 
+FILE=_mulxd
+                                  00012500  0001254d        4e
+  __REL_mulxd_i
+                                  00012500         0   none ,g         * 
+FILE=_utoxd
+                                  0001254e  00012565        18
+  __REL_utoxd
+                                  0001254e         0   none ,g         * 
+FILE=_xdtou
+                                  00012566  00012583        1e
+  __REL_xdtou
+                                  00012566         0   none ,g         * 
+  T_ZERO
+                                  00012580         0   none ,l         * 
+FILE=log10
+                                  00012584  00012771       1ee
+  _log10
+                                  00012584        3c   func ,g         * 
+  __REL_log10d_i
+                                  000125c0        10   func ,g         * 
+  __log10.1
+                                  000125d0       1a2   func ,l         * 
+FILE=_expxd
+                                  00012772  000127d7        66
+  __REL_expxd_i
+                                  00012772         0   none ,g         * 
+FILE=_itoxd
+                                  000127d8  000127f9        22
+  __REL_itoxd
+                                  000127d8         0   none ,g         * 
+  T0001
+                                  000127e4         0   none ,l         * 
+FILE=addxfd
+                                  000127fa  0001294d       154
+  T_EXCP1
+                                  000127fa         0   none ,l         * 
+  RETY
+                                  00012802         0   none ,l         * 
+  RETY2
+                                  00012804         0   none ,l         * 
+  T_RET
+                                  0001280a         0   none ,l         * 
+  __REL_addxf.d
+                                  0001280e         0   none ,g         * 
+  T0200x
+                                  00012844         0   none ,l         * 
+  T0200
+                                  0001284c         0   none ,l         * 
+  T0201
+                                  00012868         0   none ,l         * 
+  T0202x
+                                  00012888         0   none ,l         * 
+  T0202
+                                  00012890         0   none ,l         * 
+  T0203
+                                  000128a8         0   none ,l         * 
+  T0302
+                                  000128b4         0   none ,l         * 
+  T0303
+                                  000128c4         0   none ,l         * 
+  TNOR00
+                                  000128e2         0   none ,l         * 
+  TNOR01
+                                  000128fc         0   none ,l         * 
+  LZERO
+                                  00012916         0   none ,l         * 
+  T0501
+                                  00012922         0   none ,l         * 
+  T_RET2
+                                  0001294a         0   none ,l         * 
+FILE=com4d
+                                  0001294e  000129a9        5c
+  __REL_analyze1d.l
+                                  0001294e         0   none ,g         * 
+  __REL_analyze1md.l
+                                  00012972         0   none ,g         * 
+  T_RET
+                                  00012992         0   none ,l         * 
+  T_EXCP1
+                                  00012994         0   none ,l         * 
+  T_EXCP2
+                                  000129a0         0   none ,l         * 
+FILE=cvtxwl
+                                  000129aa  000129e5        3c
+  __REL_cvtx.wl
+                                  000129aa         0   none ,g         * 
+  T0102
+                                  000129be         0   none ,l         * 
+  T0103
+                                  000129ca         0   none ,l         * 
+  T0104
+                                  000129d2         0   none ,l         * 
+  LOOP1
+                                  000129d6         0   none ,l         * 
+  T0105
+                                  000129dc         0   none ,l         * 
+  T_ZERO
+                                  000129e0         0   none ,l         * 
+FILE=mulxfd
+                                  000129e6  00012aeb       106
+  __REL_mulxf.d
+                                  000129e6         0   none ,g         * 
+  T0501
+                                  00012ae2         0   none ,l         * 
+  ZEROWS
+                                  00012ae4         0   none ,l         * 
+FILE=frexp
+                                  00012aec  00012bab        c0
+  _frexp
+                                  00012aec        c0   func ,g         * 
+FILE=logdspecial
+                                  00012bac  00012bdf        34
+  __REL_logd_special
+                                  00012bac        34   func ,g         * 
+FILE=nand
+                                  00012be0  00012be7         8
+  __REL_nand_value
+                                  00012be0         8   func ,g         * 
+FILE=neginfd
+                                  00012be8  00012bef         8
+  __REL_neginfd_value
+                                  00012be8         8   func ,g         * 
+FILE=com1xd
+                                  00012bf0  00012c1d        2e
+  __REL_nor0xd.l
+                                  00012bf0         0   none ,g         * 
+  __REL_nor1xd.l
+                                  00012bf2         0   none ,g         * 
+  TNOR00
+                                  00012bfa         0   none ,l         * 
+  TNOR01
+                                  00012c0c         0   none ,l         * 
+FILE=expxd
+                                  00012c1e  00012def       1d2
+  __REL_expxd.l
+                                  00012c1e         0   none ,g         * 
+  T02000
+                                  00012d1e         0   none ,l         * 
+  T02001
+                                  00012d4a         0   none ,l         * 
+  T02001x
+                                  00012d4e         0   none ,l         * 
+  T02002
+                                  00012d6e         0   none ,l         * 
+  T02003
+                                  00012d92         0   none ,l         * 
+  T03001
+                                  00012dbe         0   none ,l         * 
+  T03002
+                                  00012dc2         0   none ,l         * 
+FILE=posinfd
+                                  00012df0  00012df7         8
+  __REL_posinfd_value
+                                  00012df0         8   func ,g         * 
+FILE=com2d
+                                  00012df8  00012e45        4e
+  __REL_plyd.l
+                                  00012df8         0   none ,g         * 
+
+SECTION=.data
+FILE=DefaultBuild\r_cg_main.obj
+                                  00012e48  00012e57        10
+FILE=DefaultBuild\r_cg_cgc.obj
+                                  00012e58  00012e5b         4
+FILE=DefaultBuild\can.obj
+                                  00012e5c  00012e78        1d
+FILE=DefaultBuild\r_cg_ostm_user.obj
+                                  00012e7c  00012eb1        36
+FILE=DefaultBuild\r_cg_taub_user.obj
+                                  00012eb4  00012f04        51
+FILE=DefaultBuild\can_in.obj
+                                  00012f08  00012fab        a4
+FILE=DefaultBuild\can_out.obj
+                                  00012fac  00013087        dc
+FILE=DefaultBuild\state.obj
+                                  00013088  0001311a        93
+FILE=DefaultBuild\deration.obj
+                                  0001311c  00013137        1c
+FILE=DefaultBuild\r_cg_intc_user.obj
+                                  00013138  0001313d         6
+FILE=DefaultBuild\debugs.obj
+                                  00013140  00013153        14
+FILE=DefaultBuild\eeprom_tork.obj
+                                  00013154  00013177        24
+FILE=DefaultBuild\auto_mpp.obj
+                                  00013178  00013183         c
+FILE=DefaultBuild\r_cg_taud_user.obj
+                                  00013184  000131a7        24
+FILE=DefaultBuild\CHAdeMO.obj
+                                  000131a8  000131ba        13
+
+SECTION=R_FDL_Text.text
+FILE=DefaultBuild\r_fdl_hw_access.obj
+                                  000131bc  00013a89       8ce
+  _R_FDL_IFct_WriteMemoryU08_TS
+                                  000131bc         6   func ,g         * 
+  _R_FDL_IFct_CalcFOpUnitCnt_BC
+                                  000131c2        1c   func ,g         * 
+  _R_FDL_IFct_ChkAccessBoundaries
+                                  000131de        8a   func ,g         * 
+  _R_FDL_FCUFct_ChkReg_Asm
+                                  00013268        1c   func ,g         * 
+  _R_FDL_FCUFct_ForcedStop
+                                  00013284        68   func ,g         * 
+  _R_FDL_FCUFct_ClearStatus
+                                  000132ec        34   func ,g         * 
+  _R_FDL_FCUFct_Switch_FAEINT
+                                  00013320        1c   func ,g         * 
+  _R_FDL_FCUFct_GetDFSize
+                                  0001333c        1e   func ,g         * 
+  _R_FDL_FCUFct_SetFrequency
+                                  0001335a        d6   func ,g         * 
+  _R_FDL_FCUFct_VerifyChecksum
+                                  00013430         4   func ,g         * 
+  _R_FDL_FCUFct_InitRAM
+                                  00013434         4   func ,g         * 
+  _R_FDL_FCUFct_SwitchMode_Start
+                                  00013438        96   func ,g         * 
+  _R_FDL_FCUFct_SwitchMode_Check_TS
+                                  000134ce        24   func ,g         * 
+  _R_FDL_FCUFct_GetStat
+                                  000134f2        a0   func ,g         * 
+  _R_FDL_FCUFct_StartWriteOperation
+                                  00013592       1c0   func ,g         * 
+  _R_FDL_FCUFct_StartBCEraseOperation
+                                  00013752        5a   func ,g         * 
+  _R_FDL_FCUFct_ReadOperation
+                                  000137ac        8e   func ,g         * 
+  _R_FDL_FCUFct_ChkStartable
+                                  0001383a        30   func ,g         * 
+  _R_FDL_FCUFct_ChkSuspendable_TS
+                                  0001386a        1c   func ,g         * 
+  _R_FDL_FCUFct_Suspend_TS
+                                  00013886         e   func ,g         * 
+  _R_FDL_FCUFct_ResumeChkNeed_TS
+                                  00013894        1e   func ,g         * 
+  _R_FDL_FCUFct_Resume_TS
+                                  000138b2         e   func ,g         * 
+  _R_FDL_FCUFct_ChkReady_TS
+                                  000138c0        1a   func ,g         * 
+  _R_FDL_FCUFct_CheckFatalError
+                                  000138da        32   func ,g         * 
+  _R_FDL_FCUFct_StandBy_Processing
+                                  0001390c        e2   func ,g         * 
+  _R_FDL_FCUFct_WakeUp_Processing
+                                  000139ee        9c   func ,g         * 
+FILE=DefaultBuild\r_fdl_user_if.obj
+                                  00013a8a  0001460b       b82
+  _R_FDL_InitVariables
+                                  00013a8a        8c   func ,g         * 
+  _R_FDL_Execute
+                                  00013b16       106   func ,g         * 
+  _R_FDL_Handler
+                                  00013c1c       68a   func ,g         * 
+  _R_FDL_GetVersionString
+                                  000142a6         8   func ,g         * 
+  _R_FDL_SuspendRequest
+                                  000142ae        74   func ,g         * 
+  _R_FDL_ResumeRequest
+                                  00014322        40   func ,g         * 
+  _R_FDL_StandBy
+                                  00014362        22   func ,g         * 
+  _R_FDL_WakeUp
+                                  00014384         4   func ,g         * 
+  _R_FDL_CancelRequest
+                                  00014388        a2   func ,g         * 
+  _R_FDL_UFct_FlashOpStart.1
+                                  0001442a       1a6   func ,l         * 
+  _R_FDL_UFct_StateOperational.1
+                                  000145d0        3c   func ,l         * 
+FILE=DefaultBuild\r_fdl_user_if_init.obj
+                                  0001460c  0001460f         4
+  _R_FDL_Init
+                                  0001460c         4   func ,g         * 
+
+SECTION=R_FDL_Const.const
+FILE=DefaultBuild\r_fdl_user_if.obj
+                                  00014610  00014622        13
+  _r_fdl_vStr.1.R_FDL_GetVersionString
+                                  00014610        13   data ,l         * 
+
+SECTION=.data.R
+FILE=DefaultBuild\r_cg_main.obj
+                                  fede8000  fede800f        10
+  _dummyCounter0
+                                  fede8000         4   data ,g         * 
+  _dummyCounter1
+                                  fede8004         4   data ,g         * 
+  _dummy
+                                  fede8008         4   data ,g         * 
+  _EXT_Control
+                                  fede800c         4   data ,g         * 
+FILE=DefaultBuild\r_cg_cgc.obj
+                                  fede8010  fede8013         4
+  _test_cgc
+                                  fede8010         4   data ,g         * 
+FILE=DefaultBuild\can.obj
+                                  fede8014  fede8030        1d
+  _eeprom_write_flag
+                                  fede8014         4   data ,g         * 
+  _RX_Fifo_msg_lost
+                                  fede8018         1   data ,g         * 
+  _rx_msg_DLC
+                                  fede8019         1   data ,g         * 
+  _rx_msg_ID
+                                  fede801c         4   data ,g         * 
+  _rx_msg_data0
+                                  fede8020         4   data ,g         * 
+  _rx_msg_data1
+                                  fede8024         4   data ,g         * 
+  _can_tx_counter
+                                  fede8028         4   data ,g         * 
+  _RxTimeStamp
+                                  fede802c         4   data ,g         * 
+  _fo8a_en
+                                  fede8030         1   data ,g         * 
+FILE=DefaultBuild\r_cg_ostm_user.obj
+                                  fede8034  fede8069        36
+  _OSTM_counter
+                                  fede8034         4   data ,g         * 
+  _AUXchargeTimeStamper
+                                  fede8038         4   data ,g         * 
+  _ChargerSOCTimeStamper
+                                  fede803c         4   data ,g         * 
+  _SleepTimer
+                                  fede8040         4   data ,g         * 
+  _GuideMeHomeCounter
+                                  fede8044         4   data ,g         * 
+  _DiagnosticBlinkCounter
+                                  fede8048         4   data ,g         * 
+  _ChadSubTimeOut
+                                  fede804c         2   data ,g         * 
+  _JuiceCounter
+                                  fede8050         4   data ,g         * 
+  _JuinceInASecond
+                                  fede8054         4   data ,g         * 
+  _JuiceAdderCount
+                                  fede8058         4   data ,g         * 
+  _wdtCounter
+                                  fede805c         4   data ,g         * 
+  _HornPWMControlTime
+                                  fede8060         4   data ,g         * 
+  _ch0_max_value
+                                  fede8064         2   data ,g         * 
+  _ch0_min_value
+                                  fede8066         2   data ,g         * 
+  _ch0_current_value
+                                  fede8068         2   data ,g         * 
+FILE=DefaultBuild\r_cg_taub_user.obj
+                                  fede806c  fede80bc        51
+  _tsl_R_counter
+                                  fede806c         1   data ,g         * 
+  _tsl_R_counterMAX
+                                  fede806d         1   data ,g         * 
+  _tsl_L_counter
+                                  fede806e         1   data ,g         * 
+  _tsl_L_counterMAX
+                                  fede806f         1   data ,g         * 
+  _led_counter
+                                  fede8070         1   data ,g         * 
+  _send_CAN_counter
+                                  fede8071         1   data ,g         * 
+  _odo_counter
+                                  fede8074         4   data ,g         * 
+  _odo_averager
+                                  fede8078         4   data ,g         * 
+  _odo_remainder
+                                  fede807c         4   data ,g         * 
+  _enableOutFrameMaker
+                                  fede8080         1   data ,g         * 
+  _chargerFrameAckCounter
+                                  fede8082         2   data ,g         * 
+  _lastChargerFrameCounter
+                                  fede8084         2   data ,g         * 
+  _cMotConFrameAckCounter
+                                  fede8086         2   data ,g         * 
+  _lastCMotConFrameCounter
+                                  fede8088         2   data ,g         * 
+  _bmsFrameAckCounter
+                                  fede808a         2   data ,g         * 
+  _lastbmsFrameCounter
+                                  fede808c         2   data ,g         * 
+  _canIdCounter
+                                  fede808e         1   data ,g         * 
+  _sleepTest
+                                  fede808f         1   data ,g         * 
+  _tsl_L_Amps
+                                  fede8090         2   data ,g         * 
+  _tsl_R_Amps
+                                  fede8092         2   data ,g         * 
+  _tsl_L_avg
+                                  fede8094         2   data ,g         * 
+  _tsl_R_avg
+                                  fede8096         2   data ,g         * 
+  _tsl_R_avgCounter
+                                  fede8098         2   data ,g         * 
+  _tsl_L_avgCounter
+                                  fede809a         2   data ,g         * 
+  _LastOdoCount
+                                  fede809c         4   data ,g         * 
+  _LastSOCwatHr
+                                  fede80a0         4   data ,g         * 
+  _aKilometer
+                                  fede80a4         4   data ,g         * 
+  _ChargerADC
+                                  fede80a8         4   data ,g         * 
+  _ChargerADCSampler
+                                  fede80ac         4   data ,g         * 
+  _Stamping_50x
+                                  fede80b0         1   data ,g         * 
+  _lastStamped_508
+                                  fede80b1         1   data ,g         * 
+  _lastStamped_509
+                                  fede80b2         1   data ,g         * 
+  _chademoFrameAckCounter
+                                  fede80b4         2   data ,g         * 
+  _taub_count
+                                  fede80b8         4   data ,g         * 
+  _can_group_180ms
+                                  fede80bc         1   data ,g         * 
+FILE=DefaultBuild\can_in.obj
+                                  fede80c0  fede8163        a4
+  _Stamped_508
+                                  fede80c0         1   data ,g         * 
+  _Stamped_509
+                                  fede80c1         1   data ,g         * 
+  _Stamper138
+                                  fede80c4         4   data ,g         * 
+  _Stamper138_gap
+                                  fede80c8         4   data ,g         * 
+  _TheFunAverager
+                                  fede80cc         4   data ,g         * 
+  _TheFunCounter
+                                  fede80d0         4   data ,g         * 
+  _TheDTCTop
+                                  fede80d4         1   data ,g         * 
+  _TheDTCSoft
+                                  fede80d5         1   data ,g         * 
+  _TheDTCCounter
+                                  fede80d6         1   data ,g         * 
+  _Big2Little
+                                  fede80d8         4   data ,g         * 
+  _dummy_bms
+                                  fede80dc         4   data ,g         * 
+  _full_value
+                                  fede80e0         4   data ,g         * 
+  _wattageCalculated
+                                  fede80e4         4   data ,g         * 
+  _AccumulatedWatt
+                                  fede80e8         4   data ,g         * 
+  _wattCalCounter
+                                  fede80ec         4   data ,g         * 
+  _LostWattHour
+                                  fede80f0         4   data ,g         * 
+  _cell_min
+                                  fede80f4         2   data ,g         * 
+  _cell_max
+                                  fede80f6         2   data ,g         * 
+  _CellDelta_Calculated
+                                  fede80f8         2   data ,g         * 
+  _CellDelta_CalculatedCounter
+                                  fede80fa         1   data ,g         * 
+  _CellDeltaBMS
+                                  fede80fc         2   data ,g         * 
+  _CellMaxBMS
+                                  fede80fe         2   data ,g         * 
+  _CellMinBMS
+                                  fede8100         2   data ,g         * 
+  _BMS_cell_voltages
+                                  fede8104        3c   data ,g         * 
+  _cmd_id
+                                  fede8140         1   data ,g         * 
+  _WattHour_0_32_419383248
+                                  fede8144         4   data ,g         * 
+  _actualSOC
+                                  fede8148         2   data ,g         * 
+  _chargerFrameCounter
+                                  fede814a         1   data ,g         * 
+  _BmsWakeFrameCounter
+                                  fede814b         1   data ,g         * 
+  _cMotConFrameCounter
+                                  fede814c         1   data ,g         * 
+  _bmsChargeContact_2_1_419366864
+                                  fede814d         1   data ,g         * 
+  _bmsDisChargeContact_1_1_419366864
+                                  fede814e         1   data ,g         * 
+  _bmsIso0_4_1_419366864
+                                  fede814f         1   data ,g         * 
+  _tempCanIn
+                                  fede8150         4   data ,g         * 
+  _TtcBuffer
+                                  fede8154         4   data ,g         * 
+  _TtcCounter
+                                  fede8158         4   data ,g         * 
+  _theFunNegtiveNegotiater.1.can_in_parsing
+                                  fede815c         4   data ,l         * 
+  _ttc_MAx_buffer.8.can_in_parsing
+                                  fede8160         4   data ,l         * 
+FILE=DefaultBuild\can_out.obj
+                                  fede8164  fede823f        dc
+  _ECU_ID
+                                  fede8164         2   data ,g         * 
+  _DebugStamping
+                                  fede8166         1   data ,g         * 
+  _noOfmembers_256
+                                  fede8167         1   data ,g         * 
+  _id_256
+                                  fede8168         2   data ,g         * 
+  _MotorTemperature_0_8_257
+                                  fede816a         1   data ,g         * 
+  _ControllerTemperature_8_8_257
+                                  fede816b         1   data ,g         * 
+  _DTE_16_8_257
+                                  fede816c         1   data ,g         * 
+  _VehicleSpeed_24_8_257
+                                  fede816d         1   data ,g         * 
+  _ThrottlePercentageMC_32_8_257
+                                  fede816e         1   data ,g         * 
+  _ReservedR1_40_2_257
+                                  fede816f         1   data ,g         * 
+  _TheFun_42_12_257
+                                  fede8170         2   data ,g         * 
+  _DriveMode_54_10_257
+                                  fede8172         1   data ,g         * 
+  _noOfmembers_257
+                                  fede8173         1   data ,g         * 
+  _id_257
+                                  fede8174         2   data ,g         * 
+  _OverRPM_7_1_258
+                                  fede8176         1   data ,g         * 
+  _LowBattery_6_1_258
+                                  fede8177         1   data ,g         * 
+  _TconStopCan_5_1_258
+                                  fede8178         1   data ,g         * 
+  _Standup_4_1_258
+                                  fede8179         1   data ,g         * 
+  _Horn_3_1_258
+                                  fede817a         1   data ,g         * 
+  _HighBeam_2_1_258
+                                  fede817b         1   data ,g         * 
+  _HeadLamplowBeam_1_1_258
+                                  fede817c         1   data ,g         * 
+  _Ignition_0_1_258
+                                  fede817d         1   data ,g         * 
+  _VehicleReady_15_1_258
+                                  fede817e         1   data ,g         * 
+  _Charging_14_1_258
+                                  fede817f         1   data ,g         * 
+  _LightSwitch_13_1_258
+                                  fede8180         1   data ,g         * 
+  _BrakeLamp_12_1_258
+                                  fede8181         1   data ,g         * 
+  _RearBrakeSwitch_11_1_258
+                                  fede8182         1   data ,g         * 
+  _FrontBrakeSwitch_10_1_258
+                                  fede8183         1   data ,g         * 
+  _Regeneration_9_1_258
+                                  fede8184         1   data ,g         * 
+  _ThrottleSwitch_8_1_258
+                                  fede8185         1   data ,g         * 
+  _ChargerConnection_23_1_258
+                                  fede8186         1   data ,g         * 
+  _CrawlMode_22_1_258
+                                  fede8187         1   data ,g         * 
+  _ServiceIndication_21_1_258
+                                  fede8188         1   data ,g         * 
+  _StarterSw_20_1_258
+                                  fede8189         1   data ,g         * 
+  _PassBySwitch_19_1_258
+                                  fede818a         1   data ,g         * 
+  _TSLRight_18_1_258
+                                  fede818b         1   data ,g         * 
+  _TSLLeft_17_1_258
+                                  fede818c         1   data ,g         * 
+  _Harderror_16_1_258
+                                  fede818d         1   data ,g         * 
+  _HighBeamOpenCircuit_31_1_258
+                                  fede818e         1   data ,g         * 
+  _HighBeamShortcircuit_30_1_258
+                                  fede818f         1   data ,g         * 
+  _AuxCharging_29_1_258
+                                  fede8190         1   data ,g         * 
+  _BatteryPackOvertemp_28_1_258
+                                  fede8191         1   data ,g         * 
+  _BmsIgnCan_27_1_258
+                                  fede8192         1   data ,g         * 
+  _LOwBeamShortcircuit_26_1_258
+                                  fede8193         1   data ,g         * 
+  _ChargerTypeChademo_25_1_258
+                                  fede8194         1   data ,g         * 
+  _ChargerTypeTork_24_1_258
+                                  fede8195         1   data ,g         * 
+  _BrakelampOpencircuit_39_1_258
+                                  fede8196         1   data ,g         * 
+  _Brakelampshortcircuit_38_1_258
+                                  fede8197         1   data ,g         * 
+  _PremiumModeStatus_37_1_258
+                                  fede8198         1   data ,g         * 
+  _ModeLockWarning_36_1_258
+                                  fede8199         1   data ,g         * 
+  _HornOpencircuit_35_1_258
+                                  fede819a         1   data ,g         * 
+  _Hornshortcircuit_34_1_258
+                                  fede819b         1   data ,g         * 
+  _HornOvervoltage_33_1_258
+                                  fede819c         1   data ,g         * 
+  _HornUndervoltage_32_1_258
+                                  fede819d         1   data ,g         * 
+  _ClusterOpencircuit_47_1_258
+                                  fede819e         1   data ,g         * 
+  _Clustershortcircuit_46_1_258
+                                  fede819f         1   data ,g         * 
+  _ClusterOvervoltage_45_1_258
+                                  fede81a0         1   data ,g         * 
+  _ClusterUndervoltage_44_1_258
+                                  fede81a1         1   data ,g         * 
+  _ModeLock_41_3_258
+                                  fede81a2         1   data ,g         * 
+  _TailLampundervoltage_40_1_258
+                                  fede81a3         1   data ,g         * 
+  _TSLLeftOpencircuit_55_1_258
+                                  fede81a4         1   data ,g         * 
+  _TSLLeftshortcircuit_54_1_258
+                                  fede81a5         1   data ,g         * 
+  _TSLLeftOvervoltage_53_1_258
+                                  fede81a6         1   data ,g         * 
+  _TSLLeftUndervoltage_52_1_258
+                                  fede81a7         1   data ,g         * 
+  _TSLRightOpencircuit_51_1_258
+                                  fede81a8         1   data ,g         * 
+  _TSLRightShortcircuit_50_1_258
+                                  fede81a9         1   data ,g         * 
+  _bmsChargeCont_49_1_258
+                                  fede81aa         1   data ,g         * 
+  _bmsDischargeCont_48_1_258
+                                  fede81ab         1   data ,g         * 
+  _MotReady_60_1_258
+                                  fede81ac         1   data ,g         * 
+  _PlugSense_63_1_258
+                                  fede81ad         1   data ,g         * 
+  _LowSoc_62_1_258
+                                  fede81ae         1   data ,g         * 
+  _HazardLamp_61_1_258
+                                  fede81af         1   data ,g         * 
+  _ECUEEPROMfault_59_1_258
+                                  fede81b0         1   data ,g         * 
+  _bmsCAN_58_1_258
+                                  fede81b1         1   data ,g         * 
+  _noOfmembers_258
+                                  fede81b2         1   data ,g         * 
+  _id_258
+                                  fede81b4         2   data ,g         * 
+  _noOfmembers_259
+                                  fede81b6         1   data ,g         * 
+  _id_259
+                                  fede81b8         2   data ,g         * 
+  _clusterBrightness_0_8_260
+                                  fede81bc         4   data ,g         * 
+  _noOfmembers_260
+                                  fede81c0         1   data ,g         * 
+  _id_260
+                                  fede81c2         2   data ,g         * 
+  _WhKm_32_10_261
+                                  fede81c4         2   data ,g         * 
+  _noOfmembers_261
+                                  fede81c6         1   data ,g         * 
+  _id_261
+                                  fede81c8         2   data ,g         * 
+  _noOfmembers_262
+                                  fede81ca         1   data ,g         * 
+  _id_262
+                                  fede81cc         2   data ,g         * 
+  _McFltCodes_32_8_263
+                                  fede81ce         1   data ,g         * 
+  _noOfmembers_263
+                                  fede81cf         1   data ,g         * 
+  _id_263
+                                  fede81d0         2   data ,g         * 
+  _noOfmembers_264
+                                  fede81d2         1   data ,g         * 
+  _id_264
+                                  fede81d4         2   data ,g         * 
+  _noOfmembers_265
+                                  fede81d6         1   data ,g         * 
+  _id_265
+                                  fede81d8         2   data ,g         * 
+  _noOfmembers_272
+                                  fede81da         1   data ,g         * 
+  _id_272
+                                  fede81dc         2   data ,g         * 
+  _noOfmembers_273
+                                  fede81de         1   data ,g         * 
+  _id_273
+                                  fede81e0         2   data ,g         * 
+  _noOfmembers_274
+                                  fede81e2         1   data ,g         * 
+  _id_274
+                                  fede81e4         2   data ,g         * 
+  _noOfmembers_276
+                                  fede81e6         1   data ,g         * 
+  _id_276
+                                  fede81e8         2   data ,g         * 
+  _noOfmembers_289
+                                  fede81ea         1   data ,g         * 
+  _id_289
+                                  fede81ec         2   data ,g         * 
+  _noOfmembers_1222
+                                  fede81ee         1   data ,g         * 
+  _id_1222
+                                  fede81f0         2   data ,g         * 
+  _noOfmembers_1280
+                                  fede81f2         1   data ,g         * 
+  _id_1280
+                                  fede81f4         2   data ,g         * 
+  _noOfmembers_1281
+                                  fede81f6         1   data ,g         * 
+  _id_1281
+                                  fede81f8         2   data ,g         * 
+  _Sub_8_8_1537
+                                  fede81fa         1   data ,g         * 
+  _noOfmembers_1537
+                                  fede81fb         1   data ,g         * 
+  _id_1537
+                                  fede81fc         2   data ,g         * 
+  _GearControl_3_3_2
+                                  fede81fe         1   data ,g         * 
+  _RegenControl_6_1_2
+                                  fede81ff         1   data ,g         * 
+  _ACCurrentControl_8_16_2
+                                  fede8200         2   data ,g         * 
+  _MaxRPMControlinForwardL_24_8_2
+                                  fede8202         1   data ,g         * 
+  _MaxRPMControlinForwardH_32_8_2
+                                  fede8203         1   data ,g         * 
+  _MaxThrottleControl_40_8_2
+                                  fede8204         1   data ,g         * 
+  _MaxDCCurrentControl_48_16_2
+                                  fede8206         2   data ,g         * 
+  _noOfmembers_2
+                                  fede8208         1   data ,g         * 
+  _id_2
+                                  fede820a         2   data ,g         * 
+  _BrakingForceSetting_0_16_3
+                                  fede820c         2   data ,g         * 
+  _MaxRegenerationDCCurrentLimi_16_16_3
+                                  fede820e         2   data ,g         * 
+  _MaxRPMControlinReverse_32_16_3
+                                  fede8210         2   data ,g         * 
+  _ThrottleCurve_53_3_3
+                                  fede8212         1   data ,g         * 
+  _noOfmembers_3
+                                  fede8213         1   data ,g         * 
+  _id_3
+                                  fede8214         2   data ,g         * 
+  _BmsIgn_40_1_406909952
+                                  fede8216         2   data ,g         * 
+  _noOfmembers_406909952
+                                  fede8218         1   data ,g         * 
+  _id_406909952
+                                  fede821c         4   data ,g         * 
+  _BmsHeartBeat1_0_64_419385573
+                                  fede8220         4   data ,g         * 
+  _BmsHeartBeat2_32_32_419385573
+                                  fede8224         4   data ,g         * 
+  _noOfmembers_419385573
+                                  fede8228         1   data ,g         * 
+  _id_419385573
+                                  fede822c         4   data ,g         * 
+  _chargerErrorFrame1_0_32_419385574
+                                  fede8230         4   data ,g         * 
+  _chargerErrorFrame2_32_32_419385574
+                                  fede8234         4   data ,g         * 
+  _noOfmembers_419385574
+                                  fede8238         1   data ,g         * 
+  _id_419385574
+                                  fede823c         4   data ,g         * 
+FILE=DefaultBuild\state.obj
+                                  fede8240  fede82d2        93
+  _starter_counter
+                                  fede8240         2   data ,g         * 
+  _starting
+                                  fede8242         1   data ,g         * 
+  _kill_releasing_counter
+                                  fede8244         2   data ,g         * 
+  _IGni_releasing_counter
+                                  fede8246         2   data ,g         * 
+  _SIdeStand_UP_counter
+                                  fede8248         2   data ,g         * 
+  _SIdeStand_DOWN_counter
+                                  fede824a         2   data ,g         * 
+  _IGniSWBuffer
+                                  fede824c         1   data ,g         * 
+  _SelectSwitchPressTime
+                                  fede8250         4   data ,g         * 
+  _AUX_VOL
+                                  fede8254         2   data ,g         * 
+  _AUX_CHARGING
+                                  fede8256         1   data ,g         * 
+  _cMotConConnectedOnCAN
+                                  fede8257         1   data ,g         * 
+  _chargerConnectedOnCAN
+                                  fede8258         1   data ,g         * 
+  _chargerConnectedOnCAN_old
+                                  fede8259         1   data ,g         * 
+  _bmsConnectedOnCAN
+                                  fede825a         1   data ,g         * 
+  _CPW_VOL
+                                  fede825c         2   data ,g         * 
+  _test_state
+                                  fede8260         4   data ,g         * 
+  _stateLockerAtStart
+                                  fede8264         1   data ,g         * 
+  _stateLockerRunning
+                                  fede8265         1   data ,g         * 
+  _bmsSendCounter
+                                  fede8268         4   data ,g         * 
+  _bmsRecovery
+                                  fede826c         1   data ,g         * 
+  _bmsRecoveryINCounter
+                                  fede8270         4   data ,g         * 
+  _bmsRecoveryOUTCounter
+                                  fede8274         4   data ,g         * 
+  _PArkSwitchCounter
+                                  fede8278         4   data ,g         * 
+  _PArkWent
+                                  fede827c         1   data ,g         * 
+  _horn_active_flag
+                                  fede827d         1   data ,g         * 
+  _thermal_runaway_active
+                                  fede827e         1   data ,g         * 
+  _hornFrequency
+                                  fede8280         4   data ,g         * 
+  _hornDuty
+                                  fede8284         4   data ,g         * 
+  _hornCounter
+                                  fede8288         4   data ,g         * 
+  _ECOratioWtHrKm
+                                  fede828c         4   data ,g         * 
+  _CITYratioWtHrKm
+                                  fede8290         4   data ,g         * 
+  _SPORTratioWtHrKm
+                                  fede8294         4   data ,g         * 
+  _actualDTE
+                                  fede8298         4   data ,g         * 
+  _CurrentWtHrKm
+                                  fede829c         4   data ,g         * 
+  _TconHardWireWake
+                                  fede82a0         1   data ,g         * 
+  _TconHardWireWakeCounter
+                                  fede82a4         4   data ,g         * 
+  _triggerBrakingHard
+                                  fede82a8         4   data ,g         * 
+  _crawlingByUser
+                                  fede82ac         1   data ,g         * 
+  _Chad_ChargerIsRunning
+                                  fede82ad         1   data ,g         * 
+  _bmsStatusToggle
+                                  fede82ae         1   data ,g         * 
+  _charger_uptime_sec
+                                  fede82b0         4   data ,g         * 
+  _charger_canoff_time
+                                  fede82b4         1   data ,g         * 
+  _ecu_Uptime_sec
+                                  fede82b8         4   data ,g         * 
+  _ign_on_time
+                                  fede82bc         4   data ,g         * 
+  _ign_off_time
+                                  fede82c0         4   data ,g         * 
+  _motcon_can_rx
+                                  fede82c4         1   data ,g         * 
+  _VehicleSpeed_odo
+                                  fede82c5         1   data ,g         * 
+  _mode_lock_warning_starts
+                                  fede82c6         1   data ,g         * 
+  _mode_lock_warning_ends
+                                  fede82c7         1   data ,g         * 
+  _slectLongPressFlag
+                                  fede82c8         1   data ,g         * 
+  _plotter_press
+                                  fede82ca         2   data ,g         * 
+  _plotter_pressed
+                                  fede82cc         2   data ,g         * 
+  _plotPos
+                                  fede82ce         1   data ,g         * 
+  _plotSel
+                                  fede82cf         1   data ,g         * 
+  _RPM_ramper
+                                  fede82d0         2   data ,g         * 
+  _RampingRPM
+                                  fede82d2         1   data ,g         * 
+FILE=DefaultBuild\deration.obj
+                                  fede82d4  fede82ef        1c
+  _RampUpMultiplier
+                                  fede82d4         4   data ,g         * 
+  _actualSpeed
+                                  fede82d8         4   data ,g         * 
+  _RampDownMultiplier
+                                  fede82dc         4   data ,g         * 
+  _test_derate
+                                  fede82e0         4   data ,g         * 
+  _DearatedAcControl
+                                  fede82e4         2   data ,g         * 
+  _EcoDeratedAC
+                                  fede82e6         2   data ,g         * 
+  _SportDeratedAC
+                                  fede82e8         2   data ,g         * 
+  _ActualDC
+                                  fede82ea         2   data ,g         * 
+  _HcAcLimit
+                                  fede82ec         2   data ,g         * 
+  _MAxDCBuffer
+                                  fede82ee         2   data ,g         * 
+FILE=DefaultBuild\r_cg_intc_user.obj
+                                  fede82f0  fede82f5         6
+  _wakeupBy_Tcon
+                                  fede82f0         1   data ,g         * 
+  _wakeupBy_CAN0
+                                  fede82f1         1   data ,g         * 
+  _wakeupBy_CAN1
+                                  fede82f2         1   data ,g         * 
+  _wakeupBy_Igni
+                                  fede82f3         1   data ,g         * 
+  _wakeupBy_Chrg
+                                  fede82f4         1   data ,g         * 
+  _wakeupBy_Aux
+                                  fede82f5         1   data ,g         * 
+FILE=DefaultBuild\debugs.obj
+                                  fede82f8  fede830b        14
+  _WritingOpen
+                                  fede82f8         4   data ,g         * 
+  _GotAddress
+                                  fede82fc         4   data ,g         * 
+  _numberOfStamping
+                                  fede8300         4   data ,g         * 
+  _datas
+                                  fede8304         8   data ,g         * 
+FILE=DefaultBuild\eeprom_tork.obj
+                                  fede830c  fede832f        24
+  _dummy_eeprom
+                                  fede830c         4   data ,g         * 
+  _MaxWattEco_788960_0_960
+                                  fede8310         4   data ,g         * 
+  _MaxWattCity_788960_2_1024
+                                  fede8314         4   data ,g         * 
+  _MaxWattSport_788960_4_1088
+                                  fede8318         4   data ,g         * 
+  _MaxRPMCrawl
+                                  fede831c         2   data ,g         * 
+  _numberOfEepVars
+                                  fede831e         2   data ,g         * 
+  _delayer_eeprom
+                                  fede8320         4   data ,g         * 
+  _dummy_cunter
+                                  fede8324         4   data ,g         * 
+  _readVal
+                                  fede8328         8   data ,g         * 
+FILE=DefaultBuild\auto_mpp.obj
+                                  fede8330  fede833b         c
+  _can_88_lsb
+                                  fede8330         4   data ,g         * 
+  _ucn_Voltage
+                                  fede8334         2   data ,g         * 
+  _ucn_Current
+                                  fede8336         2   data ,g         * 
+  _ucn_Flags
+                                  fede8338         2   data ,g         * 
+  _ucn_my_Can
+                                  fede833a         2   data ,g         * 
+FILE=DefaultBuild\r_cg_taud_user.obj
+                                  fede833c  fede835f        24
+  _taud_loop_counter
+                                  fede833c         2   data ,g         * 
+  _debounceCount
+                                  fede8340        18   data ,g         * 
+  _deb_input
+                                  fede8358         6   data ,g         * 
+  _reset_seq_start
+                                  fede835e         1   data ,g         * 
+  _reset_seq_counter
+                                  fede835f         1   data ,g         * 
+FILE=DefaultBuild\CHAdeMO.obj
+                                  fede8360  fede8372        13
+  _dummyErrorCounter
+                                  fede8360         4   data ,g         * 
+  _cp_ppPin
+                                  fede8364         1   data ,g         * 
+  _Chad_StopCharging
+                                  fede8365         1   data ,g         * 
+  _LoopCounter
+                                  fede8368         4   data ,g         * 
+  _currentOffset
+                                  fede836c         2   data ,g         * 
+  _voltageOffset
+                                  fede836e         2   data ,g         * 
+  _errorFlag
+                                  fede8370         1   data ,g         * 
+  _VP_ON
+                                  fede8371         1   data ,g         * 
+  _ChargeInterrupt
+                                  fede8372         1   data ,g         * 
+
+SECTION=.bss
+FILE=DefaultBuild\r_cg_main.obj
+                                  fede8374  fede8377         4
+  _epData
+                                  fede8374         4   data ,g         * 
+FILE=DefaultBuild\r_cg_cgc.obj
+                                  fede8378  fede837b         4
+  _g_cg_sync_read
+                                  fede8378         4   data ,g         * 
+FILE=DefaultBuild\can.obj
+                                  fede837c  fede8391        16
+  _self_test_done
+                                  fede837c         1   data ,g         * 
+  _i
+                                  fede8380         4   data ,g         * 
+  _eepromData0
+                                  fede8384         4   data ,g         * 
+  _eepromData1
+                                  fede8388         4   data ,g         * 
+  _eepromId
+                                  fede838c         4   data ,g         * 
+  _RX_Fifo_empty
+                                  fede8390         1   data ,g         * 
+  _RX_fifo_full
+                                  fede8391         1   data ,g         * 
+FILE=DefaultBuild\can_in.obj
+                                  fede8394  fede854a       1b7
+  _LastRPM
+                                  fede8394         4   data ,g         * 
+  _NowRPM
+                                  fede8398         4   data ,g         * 
+  _TheDTCVal
+                                  fede839c        64   data ,g         * 
+  _TheDTCIndex
+                                  fede8400        64   data ,g         * 
+  _indexNoForCellVoltages
+                                  fede8464         1   data ,g         * 
+  _whole_value
+                                  fede8468         4   data ,g         * 
+  _point_value
+                                  fede846c         4   data ,g         * 
+  _instant_crnt
+                                  fede8470         4   data ,g         * 
+  _sign
+                                  fede8474         4   data ,g         * 
+  _power
+                                  fede8478         4   data ,g         * 
+  _mentessa
+                                  fede847c         4   data ,g         * 
+  _fullvalue
+                                  fede8480         4   data ,g         * 
+  _decimal
+                                  fede8484         4   data ,g         * 
+  _decimal_value
+                                  fede8488         4   data ,g         * 
+  _addition_value
+                                  fede848c         4   data ,g         * 
+  _calculated_value
+                                  fede8490         4   data ,g         * 
+  _position
+                                  fede8494         4   data ,g         * 
+  _power_value
+                                  fede8498         4   data ,g         * 
+  _float_value_without_decimal
+                                  fede849c         4   data ,g         * 
+  _Cell15_dummyCell
+                                  fede84a0         2   data ,g         * 
+  _BMS_error
+                                  fede84a2        3c   data ,g         * 
+  _in_frame_name
+                                  fede84de        32   data ,g         * 
+  _MotorStatus_24_8_402
+                                  fede8510         1   data ,g         * 
+  _VehicleSpeed_7_16_401
+                                  fede8512         2   data ,g         * 
+  _WheelPerimeter_23_16_401
+                                  fede8514         2   data ,g         * 
+  _BmsCurrent_0_32_419365584
+                                  fede8518         4   data ,g         * 
+  _bmsState
+                                  fede851c         8   data ,g         * 
+  _bmsCurrentDemand_0_16_419385575
+                                  fede8524         4   data ,g         * 
+  _bmsVoltageDemand_16_16_419385575
+                                  fede8528         4   data ,g         * 
+  _chargerMode_32_8_419385575
+                                  fede852c         4   data ,g         * 
+  _chargerState_40_8_419385575
+                                  fede8530         4   data ,g         * 
+  _ePtwProtocolNumber_0_8_1289
+                                  fede8534         1   data ,g         * 
+  _ratedOuputPowerValue_8_8_1289
+                                  fede8535         1   data ,g         * 
+  _presentOutputVoltageValue_16_16_1289
+                                  fede8536         2   data ,g         * 
+  _presentOutputCurrentValue_32_16_1289
+                                  fede8538         2   data ,g         * 
+  _remainingChargingTime_48_16_1289
+                                  fede853a         2   data ,g         * 
+  _chargingSystemError_0_1_1288
+                                  fede853c         1   data ,g         * 
+  _chargerError_1_1_1288
+                                  fede853d         1   data ,g         * 
+  _batteryIncompatibility_2_1_1288
+                                  fede853e         1   data ,g         * 
+  _chargerStopControl_8_1_1288
+                                  fede853f         1   data ,g         * 
+  _chargerStatus_9_1_1288
+                                  fede8540         1   data ,g         * 
+  _latchHolding_10_1_1288
+                                  fede8541         1   data ,g         * 
+  _chargerReady_11_1_1288
+                                  fede8542         1   data ,g         * 
+  _ChstdByBeforeChrgStarts_12_1_1288
+                                  fede8543         1   data ,g         * 
+  _availableOutputVoltageValue_16_16_1288
+                                  fede8544         2   data ,g         * 
+  _availableOutputCurrentValue_32_16_1288
+                                  fede8546         2   data ,g         * 
+  _outputVoltageUpThershold_48_16_1288
+                                  fede8548         2   data ,g         * 
+  _bmsErrActive.7.can_in_parsing
+                                  fede854a         1   data ,l         * 
+FILE=DefaultBuild\can_out.obj
+                                  fede854c  fede9693      1148
+  _out_frame_name
+                                  fede854c        32   data ,g         * 
+  _can_out_temp0
+                                  fede8580         4   data ,g         * 
+  _odo_40_20_256
+                                  fede8584         4   data ,g         * 
+  _BatVolt_0_32_256
+                                  fede8588         4   data ,g         * 
+  _jsLeft_32_1_256
+                                  fede858c         1   data ,g         * 
+  _jsRight_33_1_256
+                                  fede858d         1   data ,g         * 
+  _jsUp_34_1_256
+                                  fede858e         1   data ,g         * 
+  _jsDown_35_1_256
+                                  fede858f         1   data ,g         * 
+  _jsCentre_36_1_256
+                                  fede8590         1   data ,g         * 
+  _PlotSel_60_4_256
+                                  fede8591         1   data ,g         * 
+  _startBit_256
+                                  fede8592         8   data ,g         * 
+  _length_256
+                                  fede859a         8   data ,g         * 
+  _address_256
+                                  fede85a4        20   data ,g         * 
+  _data0_256
+                                  fede85c4         4   data ,g         * 
+  _data1_256
+                                  fede85c8         4   data ,g         * 
+  _startBit_257
+                                  fede85cc         b   data ,g         * 
+  _length_257
+                                  fede85d7         b   data ,g         * 
+  _address_257
+                                  fede85e4        2c   data ,g         * 
+  _data0_257
+                                  fede8610         4   data ,g         * 
+  _data1_257
+                                  fede8614         4   data ,g         * 
+  _Tcontrollererror_57_1_258
+                                  fede8618         1   data ,g         * 
+  _KilSwitch_56_1_258
+                                  fede8619         1   data ,g         * 
+  _startBit_258
+                                  fede861a        40   data ,g         * 
+  _length_258
+                                  fede865a        40   data ,g         * 
+  _address_258
+                                  fede869c       100   data ,g         * 
+  _data0_258
+                                  fede879c         4   data ,g         * 
+  _data1_258
+                                  fede87a0         4   data ,g         * 
+  _SOC_0_10_259
+                                  fede87a4         2   data ,g         * 
+  _SOH_10_10_259
+                                  fede87a6         2   data ,g         * 
+  _CummulativeTemperature_20_12_259
+                                  fede87a8         2   data ,g         * 
+  _Cell1Voltage_32_14_259
+                                  fede87aa         2   data ,g         * 
+  _Cell2Voltage_46_14_259
+                                  fede87ac         2   data ,g         * 
+  _SequencebitF4_60_4_259
+                                  fede87ae         1   data ,g         * 
+  _startBit_259
+                                  fede87af         8   data ,g         * 
+  _length_259
+                                  fede87b7         8   data ,g         * 
+  _address_259
+                                  fede87c0        20   data ,g         * 
+  _data0_259
+                                  fede87e0         4   data ,g         * 
+  _data1_259
+                                  fede87e4         4   data ,g         * 
+  _BMSTemperaturesensor4_8_10_260
+                                  fede87e8         2   data ,g         * 
+  _UserBits_24_8_260
+                                  fede87ea         1   data ,g         * 
+  _Cell3Volt_32_14_260
+                                  fede87ec         2   data ,g         * 
+  _Cell4Volt_46_14_260
+                                  fede87ee         2   data ,g         * 
+  _SequencebitsF5_60_4_260
+                                  fede87f0         2   data ,g         * 
+  _startBit_260
+                                  fede87f2         8   data ,g         * 
+  _length_260
+                                  fede87fa         8   data ,g         * 
+  _address_260
+                                  fede8804        20   data ,g         * 
+  _data0_260
+                                  fede8824         4   data ,g         * 
+  _data1_260
+                                  fede8828         4   data ,g         * 
+  _BatteryCurrent_0_32_261
+                                  fede882c         4   data ,g         * 
+  _OnBoardBMSTemperature_42_9_261
+                                  fede8830         2   data ,g         * 
+  _BatDischargeRegeneration_51_9_261
+                                  fede8832         2   data ,g         * 
+  _SequencebitsF6_60_4_261
+                                  fede8834         2   data ,g         * 
+  _startBit_261
+                                  fede8836         8   data ,g         * 
+  _length_261
+                                  fede883e         8   data ,g         * 
+  _address_261
+                                  fede8848        20   data ,g         * 
+  _data0_261
+                                  fede8868         4   data ,g         * 
+  _data1_261
+                                  fede886c         4   data ,g         * 
+  _MotorSpeed_0_16_262
+                                  fede8870         2   data ,g         * 
+  _GearStatus_21_3_262
+                                  fede8872         1   data ,g         * 
+  _Ready_31_1_262
+                                  fede8873         1   data ,g         * 
+  _SideSuportpoweroff_30_1_262
+                                  fede8874         1   data ,g         * 
+  _Brake_29_1_262
+                                  fede8875         1   data ,g         * 
+  _Reverse_28_1_262
+                                  fede8876         1   data ,g         * 
+  _Cruise_27_1_262
+                                  fede8877         1   data ,g         * 
+  _LockMotor_26_1_262
+                                  fede8878         1   data ,g         * 
+  _Limitpower_25_1_262
+                                  fede8879         1   data ,g         * 
+  _MosfetProtection_39_1_262
+                                  fede887a         1   data ,g         * 
+  _OverCurrentMotorhasewiresho_38_1_262
+                                  fede887b         1   data ,g         * 
+  _ControllerOverTemp_37_1_262
+                                  fede887c         1   data ,g         * 
+  _ControllerOverVoltage_36_1_262
+                                  fede887d         1   data ,g         * 
+  _ControllerUnderVoltage_35_1_262
+                                  fede887e         1   data ,g         * 
+  _ThrottleGallopingFault_34_1_262
+                                  fede887f         1   data ,g         * 
+  _MotorHallError_33_1_262
+                                  fede8880         1   data ,g         * 
+  _MotorPhaseloss_32_1_262
+                                  fede8881         1   data ,g         * 
+  _MotorStalling_47_1_262
+                                  fede8882         1   data ,g         * 
+  _MotorOverTemperature_46_1_262
+                                  fede8883         1   data ,g         * 
+  _Controllerselfcheckerror_45_1_262
+                                  fede8884         1   data ,g         * 
+  _ThrottlenotZeroonpowerON_44_1_262
+                                  fede8885         1   data ,g         * 
+  _PowerStatus_43_1_262
+                                  fede8886         1   data ,g         * 
+  _SpeedLimitMode_42_1_262
+                                  fede8887         1   data ,g         * 
+  _Regeneration_41_1_262
+                                  fede8888         1   data ,g         * 
+  _PowerMode_50_3_262
+                                  fede8889         1   data ,g         * 
+  _TimeToCharge_55_9_262
+                                  fede888a         2   data ,g         * 
+  _PlugSense_40_1_262
+                                  fede888c         1   data ,g         * 
+  _startBit_262
+                                  fede888d        40   data ,g         * 
+  _length_262
+                                  fede88cd        40   data ,g         * 
+  _address_262
+                                  fede8910       100   data ,g         * 
+  _data0_262
+                                  fede8a10         4   data ,g         * 
+  _data1_262
+                                  fede8a14         4   data ,g         * 
+  _MAXCell_0_12_263
+                                  fede8a18         2   data ,g         * 
+  _CellDelta_12_12_263
+                                  fede8a1a         2   data ,g         * 
+  _AUXVol_24_8_263
+                                  fede8a1c         1   data ,g         * 
+  _ECUuptime_40_16_263
+                                  fede8a1e         2   data ,g         * 
+  _Blank2_56_8_263
+                                  fede8a20         1   data ,g         * 
+  _startBit_263
+                                  fede8a21         8   data ,g         * 
+  _length_263
+                                  fede8a29         8   data ,g         * 
+  _address_263
+                                  fede8a34        20   data ,g         * 
+  _data0_263
+                                  fede8a54         4   data ,g         * 
+  _data1_263
+                                  fede8a58         4   data ,g         * 
+  _DCCurrent_0_16_264
+                                  fede8a5c         2   data ,g         * 
+  _DCVoltage_16_8_264
+                                  fede8a5e         1   data ,g         * 
+  _ACVoltage_24_8_264
+                                  fede8a5f         1   data ,g         * 
+  _ACCurrent_32_16_264
+                                  fede8a60         2   data ,g         * 
+  _MotorSpeed_48_16_264
+                                  fede8a62         2   data ,g         * 
+  _startBit_264
+                                  fede8a64         8   data ,g         * 
+  _length_264
+                                  fede8a6c         8   data ,g         * 
+  _address_264
+                                  fede8a74        20   data ,g         * 
+  _data0_264
+                                  fede8a94         4   data ,g         * 
+  _data1_264
+                                  fede8a98         4   data ,g         * 
+  _Cell9Voltage_0_14_265
+                                  fede8a9c         2   data ,g         * 
+  _Cell10Voltage_14_14_265
+                                  fede8a9e         2   data ,g         * 
+  _Cell11Voltage_32_14_265
+                                  fede8aa0         2   data ,g         * 
+  _Cell12Voltage_46_14_265
+                                  fede8aa2         2   data ,g         * 
+  _UrbanTrimActive_60_1_265
+                                  fede8aa4         1   data ,g         * 
+  _SeqbitsF10_61_3_265
+                                  fede8aa5         1   data ,g         * 
+  _startBit_265
+                                  fede8aa6         8   data ,g         * 
+  _length_265
+                                  fede8aae         8   data ,g         * 
+  _address_265
+                                  fede8ab8        20   data ,g         * 
+  _data0_265
+                                  fede8ad8         4   data ,g         * 
+  _data1_265
+                                  fede8adc         4   data ,g         * 
+  _Cell5Voltage_0_14_272
+                                  fede8ae0         2   data ,g         * 
+  _Cell6Voltage_14_14_272
+                                  fede8ae2         2   data ,g         * 
+  _Cell7Voltage_32_14_272
+                                  fede8ae4         2   data ,g         * 
+  _Cell8Voltage_46_14_272
+                                  fede8ae6         2   data ,g         * 
+  _SeqbitsF10_60_4_272
+                                  fede8ae8         1   data ,g         * 
+  _startBit_272
+                                  fede8ae9         8   data ,g         * 
+  _length_272
+                                  fede8af1         8   data ,g         * 
+  _address_272
+                                  fede8afc        20   data ,g         * 
+  _data0_272
+                                  fede8b1c         4   data ,g         * 
+  _data1_272
+                                  fede8b20         4   data ,g         * 
+  _BMSTemperaturesensor1_0_10_273
+                                  fede8b24         2   data ,g         * 
+  _BMSTemperaturesensor2_10_10_273
+                                  fede8b26         2   data ,g         * 
+  _BMSTemperaturesensor3_20_10_273
+                                  fede8b28         2   data ,g         * 
+  _ReservedR44_25_2_273
+                                  fede8b2a         2   data ,g         * 
+  _Cell13Voltage_32_14_273
+                                  fede8b2c         2   data ,g         * 
+  _Cell14Voltage_46_14_273
+                                  fede8b2e         2   data ,g         * 
+  _SeqbitsF12_60_4_273
+                                  fede8b30         2   data ,g         * 
+  _startBit_273
+                                  fede8b32         8   data ,g         * 
+  _length_273
+                                  fede8b3a         8   data ,g         * 
+  _address_273
+                                  fede8b44        20   data ,g         * 
+  _data0_273
+                                  fede8b64         4   data ,g         * 
+  _data1_273
+                                  fede8b68         4   data ,g         * 
+  _bleConnected_0_1_274
+                                  fede8b6c         1   data ,g         * 
+  _throttleFault_1_1_274
+                                  fede8b6d         1   data ,g         * 
+  _callInfo_2_1_274
+                                  fede8b6e         1   data ,g         * 
+  _messageInfo_3_1_274
+                                  fede8b6f         1   data ,g         * 
+  _mapInfo_4_1_274
+                                  fede8b70         1   data ,g         * 
+  _parkingSym_5_1_274
+                                  fede8b71         1   data ,g         * 
+  _lockSym_6_1_274
+                                  fede8b72         1   data ,g         * 
+  _brakeFault_7_1_274
+                                  fede8b73         1   data ,g         * 
+  _straightNavigation_8_1_274
+                                  fede8b74         1   data ,g         * 
+  _leftNavigation_9_1_274
+                                  fede8b75         1   data ,g         * 
+  _rightNavigation_10_1_274
+                                  fede8b76         1   data ,g         * 
+  _uTurnRight_11_1_274
+                                  fede8b77         1   data ,g         * 
+  _uTurnLeft_12_1_274
+                                  fede8b78         1   data ,g         * 
+  _service_13_1_274
+                                  fede8b79         1   data ,g         * 
+  _motorFault_14_1_274
+                                  fede8b7a         1   data ,g         * 
+  _ecuFault_15_1_274
+                                  fede8b7b         1   data ,g         * 
+  _navigationDistance_16_16_274
+                                  fede8b7c         2   data ,g         * 
+  _km_32_1_274
+                                  fede8b7e         1   data ,g         * 
+  _mcuFault_33_1_274
+                                  fede8b7f         1   data ,g         * 
+  _signalBar1_47_1_274
+                                  fede8b80         1   data ,g         * 
+  _signalBar2_46_1_274
+                                  fede8b81         1   data ,g         * 
+  _signalBar3_45_1_274
+                                  fede8b82         1   data ,g         * 
+  _signalBar4_44_1_274
+                                  fede8b83         1   data ,g         * 
+  _signalBar5_43_1_274
+                                  fede8b84         1   data ,g         * 
+  _mobileBatBar1_42_1_274
+                                  fede8b85         1   data ,g         * 
+  _mobileBatBar2_41_1_274
+                                  fede8b86         1   data ,g         * 
+  _mobileBatBar3_40_1_274
+                                  fede8b87         1   data ,g         * 
+  _mobileBatBar4_55_1_274
+                                  fede8b88         1   data ,g         * 
+  _mobileBatBar5_54_1_274
+                                  fede8b89         1   data ,g         * 
+  _dtcCodes_56_8_274
+                                  fede8b8a         1   data ,g         * 
+  _otaA_53_1_274
+                                  fede8b8b         1   data ,g         * 
+  _otaS_52_1_274
+                                  fede8b8c         1   data ,g         * 
+  _otaF_51_1_274
+                                  fede8b8d         1   data ,g         * 
+  _due_50_1_274
+                                  fede8b8e         1   data ,g         * 
+  _bmsFault_49_1_274
+                                  fede8b8f         1   data ,g         * 
+  _dcdcFault_48_1_274
+                                  fede8b90         1   data ,g         * 
+  _startBit_274
+                                  fede8b91        40   data ,g         * 
+  _length_274
+                                  fede8bd1        40   data ,g         * 
+  _address_274
+                                  fede8c14       100   data ,g         * 
+  _data0_274
+                                  fede8d14         4   data ,g         * 
+  _data1_274
+                                  fede8d18         4   data ,g         * 
+  _TempVar1_0_32_276
+                                  fede8d1c         4   data ,g         * 
+  _TempVar2_32_32_276
+                                  fede8d20         4   data ,g         * 
+  _startBit_276
+                                  fede8d24         8   data ,g         * 
+  _length_276
+                                  fede8d2c         8   data ,g         * 
+  _address_276
+                                  fede8d34        20   data ,g         * 
+  _data0_276
+                                  fede8d54         4   data ,g         * 
+  _data1_276
+                                  fede8d58         4   data ,g         * 
+  _overVolt_0_1_289
+                                  fede8d5c         1   data ,g         * 
+  _underVolt_1_1_289
+                                  fede8d5d         1   data ,g         * 
+  _overTemp_2_1_289
+                                  fede8d5e         1   data ,g         * 
+  _underTemp_3_1_289
+                                  fede8d5f         1   data ,g         * 
+  _overload_4_1_289
+                                  fede8d60         1   data ,g         * 
+  _currentShortcircuit_5_1_289
+                                  fede8d61         1   data ,g         * 
+  _batParamTimeout_6_1_289
+                                  fede8d62         1   data ,g         * 
+  _boardValuesUptodate_7_1_289
+                                  fede8d63         1   data ,g         * 
+  _currentUptoDate_8_1_289
+                                  fede8d64         1   data ,g         * 
+  _freesbShutdown_9_1_289
+                                  fede8d65         1   data ,g         * 
+  _openConnection_10_1_289
+                                  fede8d66         1   data ,g         * 
+  _pduFailure_11_1_289
+                                  fede8d67         1   data ,g         * 
+  _pduOvertemp_12_1_289
+                                  fede8d68         1   data ,g         * 
+  _encryptionKeyNotValid_13_1_289
+                                  fede8d69         1   data ,g         * 
+  _pduLock_14_1_289
+                                  fede8d6a         1   data ,g         * 
+  _bmsAuth_15_1_289
+                                  fede8d6b         1   data ,g         * 
+  _dataCorrupted_16_1_289
+                                  fede8d6c         1   data ,g         * 
+  _prechargeErr_17_1_289
+                                  fede8d6d         1   data ,g         * 
+  _interlock_18_1_289
+                                  fede8d6e         1   data ,g         * 
+  _varTypeMismatch_19_1_289
+                                  fede8d6f         1   data ,g         * 
+  _imd_20_1_289
+                                  fede8d70         1   data ,g         * 
+  _ovSafetyFuseTrig_21_1_289
+                                  fede8d71         1   data ,g         * 
+  _association_22_1_289
+                                  fede8d72         1   data ,g         * 
+  _msd_23_1_289
+                                  fede8d73         1   data ,g         * 
+  _highHumidity_24_1_289
+                                  fede8d74         1   data ,g         * 
+  _cellTempImbalance_25_1_289
+                                  fede8d75         1   data ,g         * 
+  _prechargeLoadNotDetected_26_1_289
+                                  fede8d76         1   data ,g         * 
+  _prechargeIncomplete_27_1_289
+                                  fede8d77         1   data ,g         * 
+  _unauthorisedChargerDetected_28_1_289
+                                  fede8d78         1   data ,g         * 
+  _chargerAuthFailure_29_1_289
+                                  fede8d79         1   data ,g         * 
+  _dischargeWeldDetected_30_1_289
+                                  fede8d7a         1   data ,g         * 
+  _chargeWeldDetected_31_1_289
+                                  fede8d7b         1   data ,g         * 
+  _dischargeOpenDetected_32_1_289
+                                  fede8d7c         1   data ,g         * 
+  _chargeOpenDetected_33_1_289
+                                  fede8d7d         1   data ,g         * 
+  _dummy34_34_1_289
+                                  fede8d7e         1   data ,g         * 
+  _dummy35_35_1_289
+                                  fede8d7f         1   data ,g         * 
+  _dummy36_36_1_289
+                                  fede8d80         1   data ,g         * 
+  _dummy37_37_1_289
+                                  fede8d81         1   data ,g         * 
+  _dummy38_38_1_289
+                                  fede8d82         1   data ,g         * 
+  _dummy39_39_1_289
+                                  fede8d83         1   data ,g         * 
+  _dummy40_40_1_289
+                                  fede8d84         1   data ,g         * 
+  _dummy41_41_1_289
+                                  fede8d85         1   data ,g         * 
+  _dummy42_42_1_289
+                                  fede8d86         1   data ,g         * 
+  _dummy43_43_1_289
+                                  fede8d87         1   data ,g         * 
+  _dummy44_44_1_289
+                                  fede8d88         1   data ,g         * 
+  _dummy45_45_1_289
+                                  fede8d89         1   data ,g         * 
+  _dummy46_46_1_289
+                                  fede8d8a         1   data ,g         * 
+  _dummy47_47_1_289
+                                  fede8d8b         1   data ,g         * 
+  _dummy48_48_1_289
+                                  fede8d8c         1   data ,g         * 
+  _dummy49_49_1_289
+                                  fede8d8d         1   data ,g         * 
+  _dummy50_50_1_289
+                                  fede8d8e         1   data ,g         * 
+  _thermalRunawayDetected_51_1_289
+                                  fede8d8f         1   data ,g         * 
+  _startBit_289
+                                  fede8d90        40   data ,g         * 
+  _length_289
+                                  fede8dd0        40   data ,g         * 
+  _address_289
+                                  fede8e10       100   data ,g         * 
+  _data0_289
+                                  fede8f10         4   data ,g         * 
+  _data1_289
+                                  fede8f14         4   data ,g         * 
+  _ActivatePremiumMode_0_1_1222
+                                  fede8f18         1   data ,g         * 
+  _startBit_1222
+                                  fede8f19        40   data ,g         * 
+  _length_1222
+                                  fede8f59        40   data ,g         * 
+  _address_1222
+                                  fede8f9c       100   data ,g         * 
+  _data0_1222
+                                  fede909c         4   data ,g         * 
+  _data1_1222
+                                  fede90a0         4   data ,g         * 
+  _chargingSystemError_0_1_1280
+                                  fede90a4         1   data ,g         * 
+  _batteryOverVoltage_1_1_1280
+                                  fede90a5         1   data ,g         * 
+  _batteryUnderVoltage_2_1_1280
+                                  fede90a6         1   data ,g         * 
+  _batteryCurrentDeviation_3_1_1280
+                                  fede90a7         1   data ,g         * 
+  _highBatteryTemprature_4_1_1280
+                                  fede90a8         1   data ,g         * 
+  _voltageDeviation_5_1_1280
+                                  fede90a9         1   data ,g         * 
+  _reserved_6_1_1280
+                                  fede90aa         1   data ,g         * 
+  _reserved_7_1_1280
+                                  fede90ab         1   data ,g         * 
+  _vehicleChargingEnabled_8_1_1280
+                                  fede90ac         1   data ,g         * 
+  _vehicleStatus_9_1_1280
+                                  fede90ad         1   data ,g         * 
+  _vehicleChargingPosition_10_1_1280
+                                  fede90ae         1   data ,g         * 
+  _vehicleChargingStopControl_11_1_1280
+                                  fede90af         1   data ,g         * 
+  _standByRequestBeforeChargingStarts_12_1_1280
+                                  fede90b0         1   data ,g         * 
+  _reserved_13_1_1280
+                                  fede90b1         1   data ,g         * 
+  _charginCurrentRequestValue1_16_8_1280
+                                  fede90b2         1   data ,g         * 
+  _charginCurrentRequestValue2_24_8_1280
+                                  fede90b3         1   data ,g         * 
+  _charginVoltageTargetValue1_32_8_1280
+                                  fede90b4         1   data ,g         * 
+  _charginVoltageTargetValue2_40_8_1280
+                                  fede90b5         1   data ,g         * 
+  _batteryVoltageUpperLimit1_48_8_1280
+                                  fede90b6         1   data ,g         * 
+  _batteryVoltageUpperLimit2_56_8_1280
+                                  fede90b7         1   data ,g         * 
+  _startBit_1280
+                                  fede90b8        40   data ,g         * 
+  _length_1280
+                                  fede90f8        40   data ,g         * 
+  _address_1280
+                                  fede9138       100   data ,g         * 
+  _data0_1280
+                                  fede9238         4   data ,g         * 
+  _data1_1280
+                                  fede923c         4   data ,g         * 
+  _ePtwProtocolNumber_0_8_1281
+                                  fede9240         1   data ,g         * 
+  _chargingRate_8_8_1281
+                                  fede9241         1   data ,g         * 
+  _maximumChargingTime1_16_8_1281
+                                  fede9242         1   data ,g         * 
+  _maximumChargingTime2_24_8_1281
+                                  fede9243         1   data ,g         * 
+  _estimatedChargingTime1_32_8_1281
+                                  fede9244         1   data ,g         * 
+  _estimatedChargingTime2_40_8_1281
+                                  fede9245         1   data ,g         * 
+  _startBit_1281
+                                  fede9246        40   data ,g         * 
+  _length_1281
+                                  fede9286        40   data ,g         * 
+  _address_1281
+                                  fede92c8       100   data ,g         * 
+  _data0_1281
+                                  fede93c8         4   data ,g         * 
+  _data1_1281
+                                  fede93cc         4   data ,g         * 
+  _mainState_0_8_1537
+                                  fede93d0         1   data ,g         * 
+  _LastFunctionalState_16_8_1537
+                                  fede93d1         1   data ,g         * 
+  _LastSubState_24_8_1537
+                                  fede93d2         1   data ,g         * 
+  _CpPp_32_8_1537
+                                  fede93d3         1   data ,g         * 
+  _EcuChgIgn_40_1_1537
+                                  fede93d4         1   data ,g         * 
+  _ChgIsRunning_56_1_1537
+                                  fede93d5         1   data ,g         * 
+  _VpDetected_57_1_1537
+                                  fede93d6         1   data ,g         * 
+  _startBit_1537
+                                  fede93d7        40   data ,g         * 
+  _length_1537
+                                  fede9417        40   data ,g         * 
+  _address_1537
+                                  fede9458       100   data ,g         * 
+  _data0_1537
+                                  fede9558         4   data ,g         * 
+  _data1_1537
+                                  fede955c         4   data ,g         * 
+  _DriveControl_0_1_2
+                                  fede9560         1   data ,g         * 
+  _DirectionControl_1_1_2
+                                  fede9561         1   data ,g         * 
+  _ParkControl_2_1_2
+                                  fede9562         1   data ,g         * 
+  _startBit_2
+                                  fede9563         c   data ,g         * 
+  _length_2
+                                  fede956f         c   data ,g         * 
+  _address_2
+                                  fede957c        30   data ,g         * 
+  _data0_2
+                                  fede95ac         4   data ,g         * 
+  _data1_2
+                                  fede95b0         4   data ,g         * 
+  _startBit_3
+                                  fede95b4         8   data ,g         * 
+  _length_3
+                                  fede95bc         8   data ,g         * 
+  _address_3
+                                  fede95c4        20   data ,g         * 
+  _data0_3
+                                  fede95e4         4   data ,g         * 
+  _data1_3
+                                  fede95e8         4   data ,g         * 
+  _startBit_406909952
+                                  fede95ec         8   data ,g         * 
+  _length_406909952
+                                  fede95f4         8   data ,g         * 
+  _address_406909952
+                                  fede95fc        20   data ,g         * 
+  _data0_406909952
+                                  fede961c         4   data ,g         * 
+  _data1_406909952
+                                  fede9620         4   data ,g         * 
+  _startBit_419385573
+                                  fede9624         8   data ,g         * 
+  _length_419385573
+                                  fede962c         8   data ,g         * 
+  _address_419385573
+                                  fede9634        20   data ,g         * 
+  _data0_419385573
+                                  fede9654         4   data ,g         * 
+  _data1_419385573
+                                  fede9658         4   data ,g         * 
+  _startBit_419385574
+                                  fede965c         8   data ,g         * 
+  _length_419385574
+                                  fede9664         8   data ,g         * 
+  _address_419385574
+                                  fede966c        20   data ,g         * 
+  _data0_419385574
+                                  fede968c         4   data ,g         * 
+  _data1_419385574
+                                  fede9690         4   data ,g         * 
+FILE=DefaultBuild\state.obj
+                                  fede9694  fede96cf        3c
+  _vehicle_state
+                                  fede9694        10   data ,g         * 
+  _IGniChanged
+                                  fede96a4         2   data ,g         * 
+  _KIllChanged
+                                  fede96a6         2   data ,g         * 
+  _ChargerChanged
+                                  fede96a8         2   data ,g         * 
+  _bmsIgniToggleCounter1
+                                  fede96aa         2   data ,g         * 
+  _soft_version
+                                  fede96ac         4   data ,g         * 
+  _hardwareVersion
+                                  fede96b0         4   data ,g         * 
+  _warn_ForceDisableCellBalAtDischarge_788912_4_448
+                                  fede96b4         4   data ,g         * 
+  _warn_ForceCrawlCellBalAtDischarge_788912_2_384
+                                  fede96b8         4   data ,g         * 
+  _warn_DisableCellVolt_788928_4_640
+                                  fede96bc         4   data ,g         * 
+  _warn_OnlyCrawlCellVolt_788928_2_576
+                                  fede96c0         4   data ,g         * 
+  _warn_OnlyEcoCellVolt_788928_0_512
+                                  fede96c4         4   data ,g         * 
+  _warn_motorTemp
+                                  fede96c8         4   data ,g         * 
+  _UrbanTrimActive_Old
+                                  fede96cc         1   data ,g         * 
+  _CurrentRPMLimit
+                                  fede96ce         2   data ,g         * 
+FILE=DefaultBuild\fdl_user.obj
+                                  fede96d0  fede96d3         4
+  _PSWSafe
+                                  fede96d0         4   data ,g         * 
+FILE=DefaultBuild\r_cg_adc.obj
+                                  fede96d4  fede97e1       10e
+  _adc_buffer_raw
+                                  fede96d4        3c   data ,g         * 
+  _adc_buffer_sum
+                                  fede9710        78   data ,g         * 
+  _adc_buffer_avg
+                                  fede9788        3c   data ,g         * 
+  _short_ckt_flag
+                                  fede97c4        1e   data ,g         * 
+FILE=DefaultBuild\deration.obj
+                                  fede97e4  fede9801        1e
+  _derating
+                                  fede97e4         4   data ,g         * 
+  _bandwidth
+                                  fede97e8         4   data ,g         * 
+  _reductionPercentage
+                                  fede97ec         4   data ,g         * 
+  _nowReductionPercenFromBandwidth
+                                  fede97f0         4   data ,g         * 
+  _howAboveFromBegin
+                                  fede97f4         4   data ,g         * 
+  _howMuchValueToDeduct
+                                  fede97f8         4   data ,g         * 
+  _AcAtECO
+                                  fede97fc         2   data ,g         * 
+  _AcAtCity
+                                  fede97fe         2   data ,g         * 
+  _AcAtSport
+                                  fede9800         2   data ,g         * 
+FILE=DefaultBuild\eeprom_tork.obj
+                                  fede9804  fede9ecb       6c8
+  _eep_out_frame
+                                  fede9804        32   data ,g         * 
+  _DISCHARGE_VS_BATTEMP
+                                  fede9836        48   data ,g         * 
+  _DISCHARGE_VS_BATTEMP_pointer
+                                  fede9880         4   data ,g         * 
+  _ForceEcoCellBalAtStart_788896_0_64
+                                  fede9884         4   data ,g         * 
+  _ForceCrawlCellBalAtStart_788896_2_128
+                                  fede9888         4   data ,g         * 
+  _ForceDisableCellBalAtStart_788896_4_192
+                                  fede988c         4   data ,g         * 
+  _ForceEcoCellBalAtDischarge_788912_0_320
+                                  fede9890         4   data ,g         * 
+  _ForceCrawlCellBalAtDischarge_788912_2_384
+                                  fede9894         4   data ,g         * 
+  _ForceDisableCellBalAtDischarge_788912_4_448
+                                  fede9898         4   data ,g         * 
+  _OnlyEcoCellVolt_788928_0_512
+                                  fede989c         4   data ,g         * 
+  _OnlyCrawlCellVolt_788928_2_576
+                                  fede98a0         4   data ,g         * 
+  _DisableCellVolt_788928_4_640
+                                  fede98a4         4   data ,g         * 
+  _OnlyEcoCellTemp_788958_0_704
+                                  fede98a8         4   data ,g         * 
+  _OnlyCrawlCellTemp_788958_2_768
+                                  fede98ac         4   data ,g         * 
+  _DisableCellTemp_788958_4_832
+                                  fede98b0         4   data ,g         * 
+  _MaxRpmEco_788880_0_1152
+                                  fede98b4         4   data ,g         * 
+  _MaxRpmCity_788880_2_1216
+                                  fede98b8         4   data ,g         * 
+  _MaxRpmSport_788880_4_1280
+                                  fede98bc         4   data ,g         * 
+  _MotTempDerateBegin_788864_0_1344
+                                  fede98c0         4   data ,g         * 
+  _MotTempDerateRatio_788864_2_1408
+                                  fede98c4         4   data ,g         * 
+  _MotTempDerateConclude_788864_4_1472
+                                  fede98c8         4   data ,g         * 
+  _AcMaxEco_788848_0_1536
+                                  fede98cc         4   data ,g         * 
+  _AcMaxCity_788848_2_1600
+                                  fede98d0         4   data ,g         * 
+  _AcMaxSport_788848_4_1664
+                                  fede98d4         4   data ,g         * 
+  _OdoEep_788832_0_2496
+                                  fede98d8         4   data ,g         * 
+  _RampUpStartRPM_788816_0_1728
+                                  fede98dc         4   data ,g         * 
+  _RampUpStartDC_788816_2_1792
+                                  fede98e0         4   data ,g         * 
+  _RampUpEndRPM_788816_4_1856
+                                  fede98e4         4   data ,g         * 
+  _RampDwRPMBegin_788800_0_1920
+                                  fede98e8         4   data ,g         * 
+  _RampDwnDcLimit_788800_2_1984
+                                  fede98ec         4   data ,g         * 
+  _RampDwnRpmConclude_788800_4_2048
+                                  fede98f0         4   data ,g         * 
+  _HcRPMBegin_788784_0_2112
+                                  fede98f4         4   data ,g         * 
+  _HcAcLowLimit_788784_2_2176
+                                  fede98f8         4   data ,g         * 
+  _HcRPMConclude_788784_4_2240
+                                  fede98fc         4   data ,g         * 
+  _MaxTEMP_788768_0_2304
+                                  fede9900         4   data ,g         * 
+  _DUMmmy1_788768_2_2368
+                                  fede9904         4   data ,g         * 
+  _DUMmmy2_788768_4_2432
+                                  fede9908         4   data ,g         * 
+  _NowAllWtHrKm_912130_0_2560
+                                  fede990c         4   data ,g         * 
+  _PassWord_912131_0_2624
+                                  fede9910         8   data ,g         * 
+  _DateCompiled_912132_0_2688
+                                  fede9918         8   data ,g         * 
+  _EcuVer_912133_0_2752
+                                  fede9920         8   data ,g         * 
+  _DbcVer_912134_0_2816
+                                  fede9928         8   data ,g         * 
+  _BmsVer_912135_0_2880
+                                  fede9930         8   data ,g         * 
+  _EcuSerialNumber1_912136_0_2944
+                                  fede9938         8   data ,g         * 
+  _EcuSerialNumber2_912137_0_3008
+                                  fede9940         8   data ,g         * 
+  _BMSErrorLog_912138_0_3072
+                                  fede9948         8   data ,g         * 
+  _BMSEnabledByECU_912139_0_3136
+                                  fede9950         8   data ,g         * 
+  _VehicleSignature_912140_0_3200
+                                  fede9958         8   data ,g         * 
+  _VIN1_912141_0_3264
+                                  fede9960         8   data ,g         * 
+  _VIN2_912142_0_3328
+                                  fede9968         8   data ,g         * 
+  _VIN3_912143_0_3392
+                                  fede9970         8   data ,g         * 
+  _bmsSerial1_912144_0_3456
+                                  fede9978         8   data ,g         * 
+  _bmsSerial2_912145_0_3520
+                                  fede9980         8   data ,g         * 
+  _bmsSerial3_912146_0_3584
+                                  fede9988         8   data ,g         * 
+  _MotConSerial1_912147_0_3648
+                                  fede9990         8   data ,g         * 
+  _MotConSerial2_912148_0_3712
+                                  fede9998         8   data ,g         * 
+  _MotConSerial3_912149_0_3776
+                                  fede99a0         8   data ,g         * 
+  _ClusterSerial1_912150_0_3840
+                                  fede99a8         8   data ,g         * 
+  _ClusterSerial2_912151_0_3904
+                                  fede99b0         8   data ,g         * 
+  _ClusterSerial3_912152_0_3968
+                                  fede99b8         8   data ,g         * 
+  _TconSerial1_912153_0_4032
+                                  fede99c0         8   data ,g         * 
+  _TconSerial2_912154_0_4096
+                                  fede99c8         8   data ,g         * 
+  _TconSerial3_912155_0_4160
+                                  fede99d0         8   data ,g         * 
+  _MotorSerial1_912156_0_4224
+                                  fede99d8         8   data ,g         * 
+  _MotorSerial2_912157_0_4288
+                                  fede99e0         8   data ,g         * 
+  _MotorSerial3_912158_0_4352
+                                  fede99e8         8   data ,g         * 
+  _PremiumStatus_912159_0_4416
+                                  fede99f0         8   data ,g         * 
+  _eep_var_address
+                                  fede99f8       190   data ,g         * 
+  _eeprom_offsets
+                                  fede9b88        c8   data ,g         * 
+  _eepromCanId
+                                  fede9c50       190   data ,g         * 
+  _eepromCanStartBytes
+                                  fede9de0        c8   data ,g         * 
+  _fdlRet
+                                  fede9ea8         4   data ,g         * 
+  _req
+                                  fede9eac        18   data ,g         * 
+  _read_all_counter
+                                  fede9ec4         4   data ,g         * 
+  _ack_counter.1.feed_eeprom
+                                  fede9ec8         4   data ,l         * 
+FILE=DefaultBuild\r_cg_taud_user.obj
+                                  fede9ecc  fede9ed4         9
+  _adc_counter
+                                  fede9ecc         2   data ,g         * 
+  _deb_threshold
+                                  fede9ece         6   data ,g         * 
+  _deb_loop_count
+                                  fede9ed4         1   data ,g         * 
+FILE=DefaultBuild\CHAdeMO.obj
+                                  fede9ed8  fede9ee1         a
+  _vhSubroutines
+                                  fede9ed8         a   data ,g         * 
+FILE=com7d
+                                  fede9ee4  fede9ee7         4
+  __REL_errno_obj
+                                  fede9ee4         0   none ,l         * 
+
+SECTION=.stack.bss
+FILE=DefaultBuild\cstart.obj
+                                  fede9ee8  fedea6e7       800
+  _stacktop
+                                  fedea6e8         0   none ,l         * 
+
+SECTION=R_FDL_Data.bss
+FILE=DefaultBuild\r_fdl_user_if.obj
+                                  fedea6e8  fedea74f        68
+  _g_fdl_str
+                                  fedea6e8        68   data ,g         * 
+
+SECTION=R_FDL_CodeRam.bss
+FILE=DefaultBuild\r_fdl_user_if.obj
+                                  fedea750  fedea84f       100
+  _g_fdl_ramCodeBuf_au16
+                                  fedea750       100   data ,g         * 
+
+Absolute value symbols
+FILE=rlink_generates_01
+  __gp_data
+                                  00000000         0   none ,g         * 
+  __ep_data
+                                  00000000         0   none ,g         * 
+FILE=rlink_generates_02
+  __s.text
+                                  0000388c         0   none ,g         * 
+  __e.text
+                                  00012e46         0   none ,g         * 
+  __S_text
+                                  0000388c         0   none ,g         * 
+  __E_text
+                                  00012e46         0   none ,g         * 
+  __s.data
+                                  00012e48         0   none ,g         * 
+  __e.data
+                                  000131bb         0   none ,g         * 
+  __s.data.R
+                                  fede8000         0   none ,g         * 
+  __e.data.R
+                                  fede8373         0   none ,g         * 
+  __S_data
+                                  00012e48         0   none ,g         * 
+  __E_data
+                                  000131bb         0   none ,g         * 
+  __S_data_R
+                                  fede8000         0   none ,g         * 
+  __E_data_R
+                                  fede8373         0   none ,g         * 
+  __s.bss
+                                  fede8374         0   none ,g         * 
+  __e.bss
+                                  fede9ee8         0   none ,g         * 
+  __S_bss
+                                  fede8374         0   none ,g         * 
+  __E_bss
+                                  fede9ee8         0   none ,g         * 
+  __s.const
+                                  00001000         0   none ,g         * 
+  __e.const
+                                  00003878         0   none ,g         * 
+  __S_const
+                                  00001000         0   none ,g         * 
+  __E_const
+                                  00003878         0   none ,g         * 
+  __s.stack.bss
+                                  fede9ee8         0   none ,g         * 
+  __e.stack.bss
+                                  fedea6e8         0   none ,g         * 
+  __S_stack_bss
+                                  fede9ee8         0   none ,g         * 
+  __E_stack_bss
+                                  fedea6e8         0   none ,g         * 
+  __s.INIT_DSEC.const
+                                  00003878         0   none ,g         * 
+  __e.INIT_DSEC.const
+                                  00003884         0   none ,g         * 
+  __S_INIT_DSEC_const
+                                  00003878         0   none ,g         * 
+  __E_INIT_DSEC_const
+                                  00003884         0   none ,g         * 
+  __s.INIT_BSEC.const
+                                  00003884         0   none ,g         * 
+  __e.INIT_BSEC.const
+                                  0000388c         0   none ,g         * 
+  __S_INIT_BSEC_const
+                                  00003884         0   none ,g         * 
+  __E_INIT_BSEC_const
+                                  0000388c         0   none ,g         * 
+  __sEIINTTBL.const
+                                  00000200         0   none ,g         * 
+  __eEIINTTBL.const
+                                  00000798         0   none ,g         * 
+  __SEIINTTBL_const
+                                  00000200         0   none ,g         * 
+  __EEIINTTBL_const
+                                  00000798         0   none ,g         * 
+  __sR_FDL_Text.text
+                                  000131bc         0   none ,g         * 
+  __eR_FDL_Text.text
+                                  00014610         0   none ,g         * 
+  __SR_FDL_Text_text
+                                  000131bc         0   none ,g         * 
+  __ER_FDL_Text_text
+                                  00014610         0   none ,g         * 
+  __sR_FDL_Data.bss
+                                  fedea6e8         0   none ,g         * 
+  __eR_FDL_Data.bss
+                                  fedea750         0   none ,g         * 
+  __SR_FDL_Data_bss
+                                  fedea6e8         0   none ,g         * 
+  __ER_FDL_Data_bss
+                                  fedea750         0   none ,g         * 
+  __sR_FDL_CodeRam.bss
+                                  fedea750         0   none ,g         * 
+  __eR_FDL_CodeRam.bss
+                                  fedea850         0   none ,g         * 
+  __SR_FDL_CodeRam_bss
+                                  fedea750         0   none ,g         * 
+  __ER_FDL_CodeRam_bss
+                                  fedea850         0   none ,g         * 
+  __sR_FDL_Const.const
+                                  00014610         0   none ,g         * 
+  __eR_FDL_Const.const
+                                  00014623         0   none ,g         * 
+  __SR_FDL_Const_const
+                                  00014610         0   none ,g         * 
+  __ER_FDL_Const_const
+                                  00014623         0   none ,g         * 
+  __sRESET
+                                  00000000         0   none ,g         * 
+  __eRESET
+                                  000001f8         0   none ,g         * 
+  __SRESET
+                                  00000000         0   none ,g         * 
+  __ERESET
+                                  000001f8         0   none ,g         * 
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO

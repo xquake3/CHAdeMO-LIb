@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "debugs.h": "c",
+        "state.h": "c",
+        "target.h": "c",
+        "r_cg_macrodriver.h": "c",
+        "iodefine.h": "c",
+        "r_cg_userdefine.h": "c"
+    }
+}
